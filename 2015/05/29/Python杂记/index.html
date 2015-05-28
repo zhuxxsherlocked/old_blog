@@ -4,22 +4,28 @@
 <head>
   <meta charset="UTF-8">
   
-    <title>Hey Sherlock</title>
+    <title>Python杂记 | Hey Sherlock</title>
     <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
     
     <meta name="author" content="Zhuxx">
     
 
     
-    <meta name="description" content="Just write and br better.">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Hey Sherlock">
-<meta property="og:url" content="http://zhuxxsherlocked.githuub.io/index.html">
+    <meta name="description" content="这篇是用codecademy做题时，记录的一些东西，琐碎且含金量不高。太久不发博，发此篇练手。
+
+函数查看 everything available in the math module123456789import math            # Imports the math moduleeverything = dir(math) # Sets everything to a list">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Python杂记">
+<meta property="og:url" content="http://zhuxxsherlocked.githuub.io/2015/05/29/Python杂记/index.html">
 <meta property="og:site_name" content="Hey Sherlock">
-<meta property="og:description" content="Just write and br better.">
+<meta property="og:description" content="这篇是用codecademy做题时，记录的一些东西，琐碎且含金量不高。太久不发博，发此篇练手。
+
+函数查看 everything available in the math module123456789import math            # Imports the math moduleeverything = dir(math) # Sets everything to a list">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hey Sherlock">
-<meta name="twitter:description" content="Just write and br better.">
+<meta name="twitter:title" content="Python杂记">
+<meta name="twitter:description" content="这篇是用codecademy做题时，记录的一些东西，琐碎且含金量不高。太久不发博，发此篇练手。
+
+函数查看 everything available in the math module123456789import math            # Imports the math moduleeverything = dir(math) # Sets everything to a list">
 
     
     <link rel="alternative" href="/atom.xml" title="Hey Sherlock" type="application/atom+xml">
@@ -73,12 +79,10 @@
 </div>
     </header>
     <div id="container">
-      <div id="main">
-
-   
-    
-    <article class="post-expand post" itemprop="articleBody"> 
-        <header class="article-info clearfix">
+      <div id="main" class="post" itemscope itemprop="blogPost">
+  
+	<article itemprop="articleBody"> 
+		<header class="article-info clearfix">
   <h1 itemprop="name">
     
       <a href="/2015/05/29/Python杂记/" title="Python杂记" itemprop="url">Python杂记</a>
@@ -92,9 +96,16 @@
     
   </p>
 </header>
-    <div class="article-content">
-        
-        <p>这篇是用codecademy做题时，记录的一些东西，琐碎且含金量不高。<br>太久不发博，发此篇练手。</p>
+	<div class="article-content">
+		
+		<div id="toc" class="toc-article">
+			<strong class="toc-title">文章目录</strong>
+		
+			<ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#函数"><span class="toc-number">1.</span> <span class="toc-text">函数</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Grabs_the_first_two_items"><span class="toc-number">2.</span> <span class="toc-text">Grabs the first two items</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Grabs_the_fourth_through_last_item"><span class="toc-number">3.</span> <span class="toc-text">Grabs the fourth through last item</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Adding_a_key_‘burlap_bag’_and_assigning_a_list_to_it"><span class="toc-number">4.</span> <span class="toc-text">Adding a key ‘burlap bag’ and assigning a list to it</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Sorting_the_list_found_under_the_key_‘pouch’"><span class="toc-number">5.</span> <span class="toc-text">Sorting the list found under the key ‘pouch’</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Your_code_here"><span class="toc-number">6.</span> <span class="toc-text">Your code here</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#print_board"><span class="toc-number">7.</span> <span class="toc-text">print board</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#注意"><span class="toc-number">8.</span> <span class="toc-text">注意</span></a></li></ol>
+		
+		</div>
+		
+		<p>这篇是用codecademy做题时，记录的一些东西，琐碎且含金量不高。<br>太久不发博，发此篇练手。</p>
 <hr>
 <h1 id="函数">函数</h1><p>查看 everything available in the <code>math</code> module<br><figure class="highlight ocaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">import math            # <span class="type">Imports</span> the math <span class="keyword">module</span></span><br><span class="line">everything = dir(math) # <span class="type">Sets</span> everything <span class="keyword">to</span> a <span class="built_in">list</span> <span class="keyword">of</span> things from math</span><br><span class="line">print everything       # <span class="type">Prints</span> <span class="symbol">'em</span> all!</span><br><span class="line">```    </span><br><span class="line">#<span class="type">List</span></span><br><span class="line">list_name = [item_1, item_2]   用<span class="literal">[]</span>表示</span><br><span class="line">可以是空的 <span class="built_in">list</span>：empty_list = <span class="literal">[]</span></span><br><span class="line">索引 list_name<span class="literal">[]</span></span><br><span class="line"><span class="built_in">list</span>没有固定长度，在末尾增加item： <span class="built_in">list</span>.append<span class="literal">()</span></span><br></pre></td></tr></table></figure></p>
 <p>my_list[:2]</p>
@@ -116,14 +127,9 @@
 <h1 id="注意">注意</h1><ol>
 <li>def后面不要忘记：</li>
 </ol>
-
-        
-        
-        <p class="article-more-link">
-          
-       </p>
-    </div>
-    <footer class="article-footer clearfix">
+  
+	</div>
+		<footer class="article-footer clearfix">
 <div class="article-catetags">
 
 <div class="article-categories">
@@ -141,197 +147,43 @@
 
 
 
-
-<div class="comments-count">
+	<div class="article-share" id="share">
 	
-</div>
+	  <div data-url="http://zhuxxsherlocked.githuub.io/2015/05/29/Python杂记/" data-title="Python杂记 | Hey Sherlock" data-tsina="1576552057" class="share clearfix">
+	  </div>
+	
+	</div>
+
 
 </footer>
 
-
-    </article>
-
-
-
-
-
-
-   
-    
-    <article class="post-expand post" itemprop="articleBody"> 
-        <header class="article-info clearfix">
-  <h1 itemprop="name">
-    
-      <a href="/2015/04/16/Xichen-s-Words/" title="Xichen&#39;s Words" itemprop="url">Xichen&#39;s Words</a>
-  </h1>
-  <p class="article-author">By
-       
-		<a href="http://zhuxxsherlocked.githuub.io/about" title="Zhuxx" target="_blank" itemprop="author">Zhuxx</a>
-		
-  <p class="article-time">
-    <time datetime="2015-04-16T13:22:15.000Z" itemprop="datePublished"> 发表于 2015-04-16</time>
-    
-  </p>
-</header>
-    <div class="article-content">
-        
-        <p>Today, I want to write down some feelings.<br>About 7, I went to take a shower, and happened to see Wang Xichen.<br>I am so nervous because that i think she is the “goddess” of our class.</p>
-<hr>
-<p>用英语写不下去了。==【英语废】<br>我觉得Xichen特别优雅，有气质，落落大方，内心世界也比较丰富。我悄悄关注了她的微博，好多内容既能让我产生共鸣，又让我深深佩服。就是那种我特别admire的精致女生。</p>
-<p>回到宿舍，没想到收到了她的微信：</p>
-<blockquote>
-<p>晓曦，你把额头露出来特别好看，眼睛也好美【可爱】</p>
-</blockquote>
-<p>我2b的回复了几句，and then：</p>
-<blockquote>
-<p>真的好好看，我一下子都愣了神！<br>就忍不住想告诉你【害羞】</p>
-</blockquote>
-<p>看来，有缘分的人是相吸的吧。你是我在SJTU第一个认识的同班同学，告诉我第一次班会的时间的人。<br>谢谢你今晚的那些话，让不自信的我多了那一点点信心。<br>我不奢求我们的友谊能走多深，有哪怕一点点美好回忆就够。<br>祝你幸福，好姑娘。</p>
-
-        
-        
-        <p class="article-more-link">
-          
-       </p>
-    </div>
-    <footer class="article-footer clearfix">
-<div class="article-catetags">
-
-<div class="article-categories">
-  <span></span>
-  <a class="article-category-link" href="/categories/随笔生活/">随笔生活</a>
-</div>
-
-
-  <div class="article-tags">
-  
-  <span></span> <a href="/tags/情感/">情感</a>
-  </div>
-
-</div>
-
-
-
-
-<div class="comments-count">
+   	       
+	</article>
 	
+<nav class="article-nav clearfix">
+ 
+
+<div class="next">
+<a href="/2015/04/16/Xichen-s-Words/"  title="Xichen&#39;s Words">
+ <strong>下一篇：</strong><br/> 
+ <span>Xichen&#39;s Words
+</span>
+</a>
 </div>
 
-</footer>
+</nav>
 
-
-    </article>
-
-
-
-
-
-
-   
-    
-    <article class="post-expand post" itemprop="articleBody"> 
-        <header class="article-info clearfix">
-  <h1 itemprop="name">
-    
-      <a href="/2015/04/14/有关博客/" title="有关博客" itemprop="url">有关博客</a>
-  </h1>
-  <p class="article-author">By
-       
-		<a href="http://zhuxxsherlocked.githuub.io/about" title="Zhuxx" target="_blank" itemprop="author">Zhuxx</a>
-		
-  <p class="article-time">
-    <time datetime="2015-04-14T14:30:24.000Z" itemprop="datePublished"> 发表于 2015-04-14</time>
-    
-  </p>
-</header>
-    <div class="article-content">
-        
-        <h2 id="写在前面">写在前面</h2><p>上周组会，导师突然来了灵感，要建立我们小组的主页，而没想到的是这任务竟然落在我头上。之前从来没有接触过做网页的我，倒是现学现卖，用了06年就停止更新的FrontPage在一天内搞定了大概。如此效率的原因还是因为这个软件真的是极好上手。</p>
-<p>在决定用FrontPage之前，我还做了一番调研：为什么这个红极一时的软件没落了，以及现在正流行着什么。虽然为了尽快交差和对html语言不熟悉等原因我选了一个out的方法，WordPress却引起了我的注意，随后又引着我发现了Github Pages。</p>
-<p>在阮一峰的<em><a href="http://www.ruanyifeng.com/blog/2012/08/blogging_with_jekyll.html" target="_blank" rel="external">搭建一个免费的，无限流量的Blog——github Pages和Jekyll入门</a></em>上看到这样一段话：</p>
-<blockquote>
-<p>第一阶段，刚接触Blog，觉得很新鲜，试着选择一个免费空间来写。<br>  第二阶段，发现免费空间限制太多，就自己购买域名和空间，搭建独立博客。<br>  第三阶段，觉得独立博客的管理太麻烦，最好在保留控制权的前提下，让别人来管，自己只负责写文章。</p>
-</blockquote>
-<p>发现自己跳过第二阶段，直接跑第三阶段来了。　　</p>
-<hr>
-<h2 id="搭建过程">搭建过程</h2><p>废话不多说，记录一下自己搭建的过程。</p>
-<h3 id="找一个靠谱的教程很重要！"><strong>找一个靠谱的教程很重要！</strong></h3><p>网上的教程大多详尽，但是要区分一些转载来的，或者自己糅合修改过的，他们很有可能落下了原文的一些东西，让人苦不堪言。<br>贴几个我用到的教程。</p>
-<h4 id="如何搭建一个独立博客——简明Github_Pages与Hexo教程"><a href="http://www.jianshu.com/p/05289a4bc8b2" target="_blank" rel="external">如何搭建一个独立博客——简明Github Pages与Hexo教程</a></h4><p>我一开始就是按到这个来搭建的。这篇应该是作者对几个自己做的一个整合，我在看的过程中对比了一下，发现有些地方做了贴心的修改提示。但是它很坑的是<strong>没有提到修改config.yml配置文件中的deploy</strong>！害我不知哪里出了差错，本地部署的好好的，可是github pages就是不更新！昨天辛辛苦苦搞到2点无果，睡前告诉自己明天不弄了，去看paper，今早起来还是不甘心，幸运地我发现了第二篇文章。</p>
-<h4 id="使用Github搭建静态博客（Hexo）"><a href="http://segmentfault.com/a/1190000000458953" target="_blank" rel="external">使用Github搭建静态博客（Hexo）</a></h4><p>这篇对我的帮助在于：</p>
-<blockquote>
-<p>部署到github</p>
-<p>现在，到github新建一个项目，项目名为：你的用户名.github.io必须为这个名字</p>
-<p>然后，配置文件_config.yml<br><figure class="highlight less"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">deploy</span>:   </span><br><span class="line">  <span class="attribute">type</span>: github   <span class="attribute">repository</span>:git<span class="variable">@github</span>.<span class="attribute">com</span>:你的帐号/你的帐号.github.com.git   </span><br><span class="line">  例如我的：<span class="attribute">repository</span>:git<span class="variable">@github</span>.<span class="attribute">com</span>:zhongbaitu/zhongbaitu.github.com.git   </span><br><span class="line">  <span class="attribute">branch</span>: master</span><br></pre></td></tr></table></figure></p>
-<p>然后执行命令：<br><figure class="highlight nginx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="title">hexo</span> clean </span><br><span class="line">hexo generate </span><br><span class="line">hexo deploy</span><br></pre></td></tr></table></figure></p>
-<p>此时，在博客的根目录下会生成一个文件夹：.deploy</p>
-<p>然后我们把这个文件夹里面的文件都push到刚才新建那个项目就OK了。几分钟过后，就可以打开你的用户名.github.io看到你的博客了。</p>
-</blockquote>
-<h4 id="使用hexo搭建github-io博客(一)"><a href="http://www.cnblogs.com/liulangmao/" target="_blank" rel="external">使用hexo搭建github.io博客(一)</a></h4><p>当时对上一篇博客写的还是有点迷茫，这一篇真正解决了我的问题。</p>
-<blockquote>
-<p>配置_config.yml文件并发布:<br>在 E:\hexo 下,有一个文件叫 _config.yml ,打开它,拉到最底下,做如下修改:　</p>
-<figure class="highlight http"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">deploy</span>: <span class="string">  </span></span><br><span class="line">    <span class="attribute">type</span>: <span class="string">github      //改成github   </span></span><br><span class="line">    <span class="attribute">repository</span>: <span class="string">https://github.com/jinyanhuan/jinyanhuan.github.io    //改成自己的用户名  </span></span><br><span class="line">    <span class="attribute">branch</span>: <span class="string">master</span></span><br></pre></td></tr></table></figure>
-<p>配置完以后还是在E:\hexo下执行:</p>
-<figure class="highlight nginx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="title">hexo</span> generate</span><br><span class="line">hexo deploy</span><br></pre></td></tr></table></figure>
-<p>执行完以后,如果报错 Error: Deployer not found : github,则执行如下命令:<br><figure class="highlight applescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&gt; npm install hexo-deployer-git <span class="comment">--save</span></span><br></pre></td></tr></table></figure></p>
-<p>同时修改 _config.yml :<br><figure class="highlight http"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">deploy</span>: <span class="string">  </span></span><br><span class="line">  <span class="attribute">type</span>: <span class="string">git      //改成github</span></span><br></pre></td></tr></table></figure></p>
-<p>然后再执行:<br><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="blockquote">&gt; hexo generate</span></span><br><span class="line"><span class="blockquote">&gt; hexo deploy</span></span><br></pre></td></tr></table></figure></p>
-<p>然后访问: <a href="http://jinyanhuan.github.io/" target="_blank" rel="external">http://jinyanhuan.github.io/</a> (用户名改成自己的),就可以看到了.</p>
-<p>注意,每次修改本地文件后，需要  hexo generate  才能保存。每次使用命令时，都要在 E:\hexo 目录下</p>
-</blockquote>
-<h4 id="如何使用_Jacman_主题"><a href="http://wuchong.me/blog/2014/11/20/how-to-use-jacman/" target="_blank" rel="external">如何使用 Jacman 主题</a></h4><p>根据这篇博客，对主题进行了修改。这个博主看起来也很NB。</p>
-<hr>
-<h2 id="凌乱的总结">凌乱的总结</h2><p>赶着从实验室回宿舍。<br>第一次接触了Markdown，还需要多多摸索。</p>
-<p>当然，还是感谢第一篇文章，让我搞懂了大部分操作，并决定利用hexo搭建本地博客。<br>从动手到基本成型，花了一天的时间，虽然中间碰到问题，对结果还是非常开心。</p>
-<p>这是第一篇正式的博客，希望自己以后能坚持下去，多思多写。<br>写几点期望：</p>
-<ol>
-<li>多写些干货。别变成我的碎碎念。</li>
-<li>在这信息爆炸的时代，自己还是那种乐于多面展开而不精的人，希望结合ONENOTE能够多多记录自己的所思所想。</li>
-<li>由于自己技术欠缺的太多，不希望把这个博定位于技术博，那样我的热情可能就会消退。</li>
-<li>通过这次建立Github Pages发现不少有意思的博，待我慢慢关注。</li>
-</ol>
-
-        
-        
-        <p class="article-more-link">
-          
-       </p>
-    </div>
-    <footer class="article-footer clearfix">
-<div class="article-catetags">
-
-<div class="article-categories">
-  <span></span>
-  <a class="article-category-link" href="/categories/随笔生活/">随笔生活</a>
-</div>
-
-
-  <div class="article-tags">
-  
-  <span></span> <a href="/tags/随笔/">随笔</a>
-  </div>
-
-</div>
-
-
-
-
-<div class="comments-count">
 	
-</div>
 
-</footer>
-
-
-    </article>
-
-
-
-
-
-
-
-</div>
+</div>  
       <div class="openaside"><a class="navbutton" href="#" title="显示侧边栏"></a></div>
+
+  <div id="toc" class="toc-aside">
+  <strong class="toc-title">文章目录</strong>
+ 
+ <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#函数"><span class="toc-number">1.</span> <span class="toc-text">函数</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Grabs_the_first_two_items"><span class="toc-number">2.</span> <span class="toc-text">Grabs the first two items</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Grabs_the_fourth_through_last_item"><span class="toc-number">3.</span> <span class="toc-text">Grabs the fourth through last item</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Adding_a_key_‘burlap_bag’_and_assigning_a_list_to_it"><span class="toc-number">4.</span> <span class="toc-text">Adding a key ‘burlap bag’ and assigning a list to it</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Sorting_the_list_found_under_the_key_‘pouch’"><span class="toc-number">5.</span> <span class="toc-text">Sorting the list found under the key ‘pouch’</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Your_code_here"><span class="toc-number">6.</span> <span class="toc-text">Your code here</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#print_board"><span class="toc-number">7.</span> <span class="toc-text">print board</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#注意"><span class="toc-number">8.</span> <span class="toc-text">注意</span></a></li></ol>
+ 
+  </div>
 
 <div id="asidepart">
 <div class="closeaside"><a class="closebutton" href="#" title="隐藏侧边栏"></a></div>
@@ -474,12 +326,69 @@ $(document).ready(function(){
       m.removeClass('moveMain');
       a.css('display', 'block').removeClass('fadeOut');
       o.css('display', 'none');
+      
+      $('#toc.toc-aside').css('display', 'none');
         
     }
   });
 });
 </script>
 
+<script type="text/javascript">
+$(document).ready(function(){ 
+  var ai = $('.article-content>iframe'),
+      ae = $('.article-content>embed'),
+      t  = $('#toc'),
+      ta = $('#toc.toc-aside'),
+      o  = $('.openaside'),
+      c  = $('.closeaside');
+  if(ai.length>0){
+    ai.wrap('<div class="video-container" />');
+  };
+  if(ae.length>0){
+   ae.wrap('<div class="video-container" />');
+  };
+  c.click(function(){
+    ta.css('display', 'block').addClass('fadeIn');
+  });
+  o.click(function(){
+    ta.css('display', 'none');
+  });
+  $(window).scroll(function(){
+    ta.css("top",Math.max(140,320-$(this).scrollTop()));
+  });
+});
+</script>
+
+
+<script type="text/javascript">
+$(document).ready(function(){ 
+  var $this = $('.share'),
+      url = $this.attr('data-url'),
+      encodedUrl = encodeURIComponent(url),
+      title = $this.attr('data-title'),
+      tsina = $this.attr('data-tsina'),
+      description = $this.attr('description');
+  var html = [
+  '<a href="#" class="overlay" id="qrcode"></a>',
+  '<div class="qrcode clearfix"><span>扫描二维码分享到微信朋友圈</span><a class="qrclose" href="#nothing"></a><strong>Loading...Please wait</strong><img id="qrcode-pic" data-src="http://s.jiathis.com/qrcode.php?url=' + encodedUrl + '"/></div>',
+  '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="article-share-facebook" target="_blank" title="Facebook"></a>',
+  '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="article-share-twitter" target="_blank" title="Twitter"></a>',
+  '<a href="#qrcode" class="article-share-qrcode" title="微信"></a>',
+  '<a href="http://widget.renren.com/dialog/share?resourceUrl=' + encodedUrl + '&srcUrl=' + encodedUrl + '&title=' + title +'" class="article-share-renren" target="_blank" title="人人"></a>',
+  '<a href="http://service.weibo.com/share/share.php?title='+title+'&url='+encodedUrl +'&ralateUid='+ tsina +'&searchPic=true&style=number' +'" class="article-share-weibo" target="_blank" title="微博"></a>',
+  '<span title="Share to"></span>'
+  ].join('');
+  $this.append(html);
+  $('.article-share-qrcode').click(function(){
+    var imgSrc = $('#qrcode-pic').attr('data-src');
+    $('#qrcode-pic').attr('src', imgSrc);
+    $('#qrcode-pic').load(function(){
+        $('.qrcode strong').text(' ');
+    });
+  });
+});     
+</script>
 
 
 
@@ -540,4 +449,4 @@ $(document).ready(function(){
 <!-- Tiny_search End -->
 
   </body>
- </html>
+</html>
