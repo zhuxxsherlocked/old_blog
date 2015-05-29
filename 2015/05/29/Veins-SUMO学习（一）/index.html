@@ -4,22 +4,29 @@
 <head>
   <meta charset="UTF-8">
   
-    <title>Hey Sherlock</title>
+    <title>Veins SUMO学习（一） | Hey Sherlock</title>
     <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
     
     <meta name="author" content="Zhuxx">
     
 
     
-    <meta name="description" content="Just write and br better.">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Hey Sherlock">
-<meta property="og:url" content="http://zhuxxsherlocked.githuub.io/index.html">
+    <meta name="description" content="十天前接触了下SUMO，碰到一堆BUG，一定要选对版本。感谢CXY。现在才总结表示有点呵呵。
+
+目的是进行交通仿真。之前考虑过使用VISSIM，也买了书进行学习，但是VISSIM是商业软件，是要收费的，想画交大地图时，学生版限制在1000m，仿真时间也只有3600s，放弃。CXY推荐了Veins，开源，免费。但有句话说：免费的是最贵的。 所以，还要下一番功夫。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Veins SUMO学习（一）">
+<meta property="og:url" content="http://zhuxxsherlocked.githuub.io/2015/05/29/Veins-SUMO学习（一）/index.html">
 <meta property="og:site_name" content="Hey Sherlock">
-<meta property="og:description" content="Just write and br better.">
+<meta property="og:description" content="十天前接触了下SUMO，碰到一堆BUG，一定要选对版本。感谢CXY。现在才总结表示有点呵呵。
+
+目的是进行交通仿真。之前考虑过使用VISSIM，也买了书进行学习，但是VISSIM是商业软件，是要收费的，想画交大地图时，学生版限制在1000m，仿真时间也只有3600s，放弃。CXY推荐了Veins，开源，免费。但有句话说：免费的是最贵的。 所以，还要下一番功夫。">
+<meta property="og:image" content="http://7xjcml.com1.z0.glb.clouddn.com/sumo-map.png">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hey Sherlock">
-<meta name="twitter:description" content="Just write and br better.">
+<meta name="twitter:title" content="Veins SUMO学习（一）">
+<meta name="twitter:description" content="十天前接触了下SUMO，碰到一堆BUG，一定要选对版本。感谢CXY。现在才总结表示有点呵呵。
+
+目的是进行交通仿真。之前考虑过使用VISSIM，也买了书进行学习，但是VISSIM是商业软件，是要收费的，想画交大地图时，学生版限制在1000m，仿真时间也只有3600s，放弃。CXY推荐了Veins，开源，免费。但有句话说：免费的是最贵的。 所以，还要下一番功夫。">
 
     
     <link rel="alternative" href="/atom.xml" title="Hey Sherlock" type="application/atom+xml">
@@ -73,12 +80,10 @@
 </div>
     </header>
     <div id="container">
-      <div id="main">
-
-   
-    
-    <article class="post-expand post" itemprop="articleBody"> 
-        <header class="article-info clearfix">
+      <div id="main" class="post" itemscope itemprop="blogPost">
+  
+	<article itemprop="articleBody"> 
+		<header class="article-info clearfix">
   <h1 itemprop="name">
     
       <a href="/2015/05/29/Veins-SUMO学习（一）/" title="Veins SUMO学习（一）" itemprop="url">Veins SUMO学习（一）</a>
@@ -92,21 +97,32 @@
     
   </p>
 </header>
-    <div class="article-content">
-        
-        <p>十天前接触了下SUMO，碰到一堆BUG，一定要选对版本。<br>感谢CXY。<br>现在才总结表示有点呵呵。</p>
+	<div class="article-content">
+		
+		<div id="toc" class="toc-article">
+			<strong class="toc-title">文章目录</strong>
+		
+			
+		
+		</div>
+		
+		<p>十天前接触了下SUMO，碰到一堆BUG，一定要选对版本。<br>感谢CXY。<br>现在才总结表示有点呵呵。</p>
 <hr>
 <p>目的是进行交通仿真。<br>之前考虑过使用VISSIM，也买了书进行学习，但是VISSIM是商业软件，是要收费的，想画交大地图时，学生版限制在1000m，仿真时间也只有3600s，放弃。<br>CXY推荐了Veins，开源，免费。但有句话说：<em>免费的是最贵的。</em> 所以，还要下一番功夫。</p>
 <hr>
-        
-        
-        <p class="article-more-link">
-          
-            <a href="/2015/05/29/Veins-SUMO学习（一）/#more">Read More</a>
-          
-       </p>
-    </div>
-    <footer class="article-footer clearfix">
+<a id="more"></a>
+<p>1.Veins主页  <a href="http://veins.car2x.org/" target="_blank" rel="external">Veins Home</a><br>  查看Tutorial，需要安装SUMO， OMNeT++， Veins.<br>  注：<strong>一定要注意版本</strong><br>      之前装的SUMO msi是0.23.0 教程要求的是0.21.0 执行命令时一直有bug<br>      换回0.21.0 原本没出错的地方，倒出错了。<br>      还有lib库的版本。用0.21.0版本的lib 执行<code>randomTrips.py</code> ，换用0.23.0却能正常运行。但是CXY运行却是好的。<br>      很崩溃！!！有木有！！！<br>      好在，最后跑出了地图。</p>
+<p>2.地图导入<br>  参考 <a href="https://www.youtube.com/results?search_query=sumo+import+map" target="_blank" rel="external">https://www.youtube.com/results?search_query=sumo+import+map</a> 第一个和第三个视频<br>  sumo-0.21.0 下 start-command-line.bat<br>  执行以下指令:</p>
+<pre><code>cd /d c:\Users\Zhuxx\veins\sumo-<span class="number">0.21</span>.<span class="number">0</span>\sjtu
+netconvert --osm-files sjtu<span class="class">.osm</span> -o sjtu<span class="class">.net</span><span class="class">.xml</span>
+polyconvert --net-file sjtu<span class="class">.net</span><span class="class">.xml</span> --osm-files sjtu<span class="class">.osm</span> --type-file typemap<span class="class">.xml</span> -o sjtu<span class="class">.poly</span><span class="class">.xml</span>
+python c:\Users\Zhuxx\veins\sumo-<span class="number">0.21</span>.<span class="number">0</span>\tools\trip\randomTrips<span class="class">.py</span> -n sjtu<span class="class">.net</span><span class="class">.xml</span> -e <span class="number">50</span> -l
+python c:\Users\Zhuxx\veins\sumo-<span class="number">0.21</span>.<span class="number">0</span>\tools\trip\randomTrips<span class="class">.py</span> -n sjtu<span class="class">.net</span><span class="class">.xml</span> -r sjtu<span class="class">.rou</span><span class="class">.xml</span> -e <span class="number">50</span> -l
+sumo-gui sjtu<span class="class">.sumo</span><span class="class">.cfg</span>
+</code></pre><p>其中牵扯config文件修改，typemap.xml等。<br>导入地图效果:<br><img src="http://7xjcml.com1.z0.glb.clouddn.com/sumo-map.png" alt="SJTU地图"></p>
+  
+	</div>
+		<footer class="article-footer clearfix">
 <div class="article-catetags">
 
 <div class="article-categories">
@@ -124,212 +140,43 @@
 
 
 
-
-<div class="comments-count">
+	<div class="article-share" id="share">
 	
-</div>
+	  <div data-url="http://zhuxxsherlocked.githuub.io/2015/05/29/Veins-SUMO学习（一）/" data-title="Veins SUMO学习（一） | Hey Sherlock" data-tsina="1576552057" class="share clearfix">
+	  </div>
+	
+	</div>
+
 
 </footer>
 
-
-    </article>
-
-
-
-
-
-
-   
-    
-    <article class="post-expand post" itemprop="articleBody"> 
-        <header class="article-info clearfix">
-  <h1 itemprop="name">
-    
-      <a href="/2015/05/29/Python杂记/" title="Python杂记" itemprop="url">Python杂记</a>
-  </h1>
-  <p class="article-author">By
-       
-		<a href="http://zhuxxsherlocked.githuub.io/about" title="Zhuxx" target="_blank" itemprop="author">Zhuxx</a>
-		
-  <p class="article-time">
-    <time datetime="2015-05-28T16:01:10.000Z" itemprop="datePublished"> 发表于 2015-05-29</time>
-    
-  </p>
-</header>
-    <div class="article-content">
-        
-        <p>这篇是用codecademy做题时，记录的一些东西，琐碎且含金量不高。<br>太久不发博，发此篇练手。</p>
-<hr>
-<h1 id="函数">函数</h1><p>查看 everything available in the <code>math</code> module</p>
-<figure class="highlight coffeescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="reserved">import</span> math            <span class="comment"># Imports the math module</span></span><br><span class="line">everything = dir(math) <span class="comment"># Sets everything to a list of things from math</span></span><br><span class="line"><span class="built_in">print</span> everything       <span class="comment"># Prints 'em all!</span></span><br></pre></td></tr></table></figure>
-        
-        
-        <p class="article-more-link">
-          
-            <a href="/2015/05/29/Python杂记/#more">Read More</a>
-          
-       </p>
-    </div>
-    <footer class="article-footer clearfix">
-<div class="article-catetags">
-
-<div class="article-categories">
-  <span></span>
-  <a class="article-category-link" href="/categories/学习/">学习</a>
-</div>
-
-
-  <div class="article-tags">
-  
-  <span></span> <a href="/tags/Python/">Python</a>
-  </div>
-
-</div>
-
-
-
-
-<div class="comments-count">
+   	       
+	</article>
 	
+<nav class="article-nav clearfix">
+ 
+
+<div class="next">
+<a href="/2015/05/29/Python杂记/"  title="Python杂记">
+ <strong>下一篇：</strong><br/> 
+ <span>Python杂记
+</span>
+</a>
 </div>
 
-</footer>
+</nav>
 
-
-    </article>
-
-
-
-
-
-
-   
-    
-    <article class="post-expand post" itemprop="articleBody"> 
-        <header class="article-info clearfix">
-  <h1 itemprop="name">
-    
-      <a href="/2015/04/16/Xichen-s-Words/" title="Xichen&#39;s Words" itemprop="url">Xichen&#39;s Words</a>
-  </h1>
-  <p class="article-author">By
-       
-		<a href="http://zhuxxsherlocked.githuub.io/about" title="Zhuxx" target="_blank" itemprop="author">Zhuxx</a>
-		
-  <p class="article-time">
-    <time datetime="2015-04-16T13:22:15.000Z" itemprop="datePublished"> 发表于 2015-04-16</time>
-    
-  </p>
-</header>
-    <div class="article-content">
-        
-        <p>Today, I want to write down some feelings.<br>About 7, I went to take a shower, and happened to see Wang Xichen.<br>I am so nervous because that i think she is the “goddess” of our class.</p>
-<hr>
-        
-        
-        <p class="article-more-link">
-          
-            <a href="/2015/04/16/Xichen-s-Words/#more">Read More</a>
-          
-       </p>
-    </div>
-    <footer class="article-footer clearfix">
-<div class="article-catetags">
-
-<div class="article-categories">
-  <span></span>
-  <a class="article-category-link" href="/categories/随笔生活/">随笔生活</a>
-</div>
-
-
-  <div class="article-tags">
-  
-  <span></span> <a href="/tags/情感/">情感</a>
-  </div>
-
-</div>
-
-
-
-
-<div class="comments-count">
 	
-</div>
 
-</footer>
-
-
-    </article>
-
-
-
-
-
-
-   
-    
-    <article class="post-expand post" itemprop="articleBody"> 
-        <header class="article-info clearfix">
-  <h1 itemprop="name">
-    
-      <a href="/2015/04/14/有关博客/" title="有关博客" itemprop="url">有关博客</a>
-  </h1>
-  <p class="article-author">By
-       
-		<a href="http://zhuxxsherlocked.githuub.io/about" title="Zhuxx" target="_blank" itemprop="author">Zhuxx</a>
-		
-  <p class="article-time">
-    <time datetime="2015-04-14T14:30:24.000Z" itemprop="datePublished"> 发表于 2015-04-14</time>
-    
-  </p>
-</header>
-    <div class="article-content">
-        
-        <h2 id="写在前面">写在前面</h2><p>上周组会，导师突然来了灵感，要建立我们小组的主页，而没想到的是这任务竟然落在我头上。之前从来没有接触过做网页的我，倒是现学现卖，用了06年就停止更新的FrontPage在一天内搞定了大概。如此效率的原因还是因为这个软件真的是极好上手。</p>
-<p>在决定用FrontPage之前，我还做了一番调研：为什么这个红极一时的软件没落了，以及现在正流行着什么。虽然为了尽快交差和对html语言不熟悉等原因我选了一个out的方法，WordPress却引起了我的注意，随后又引着我发现了Github Pages。</p>
-        
-        
-        <p class="article-more-link">
-          
-            <a href="/2015/04/14/有关博客/#more">Read More</a>
-          
-       </p>
-    </div>
-    <footer class="article-footer clearfix">
-<div class="article-catetags">
-
-<div class="article-categories">
-  <span></span>
-  <a class="article-category-link" href="/categories/随笔生活/">随笔生活</a>
-</div>
-
-
-  <div class="article-tags">
-  
-  <span></span> <a href="/tags/随笔/">随笔</a>
-  </div>
-
-</div>
-
-
-
-
-<div class="comments-count">
-	
-</div>
-
-</footer>
-
-
-    </article>
-
-
-
-
-
-
-
-</div>
+</div>  
       <div class="openaside"><a class="navbutton" href="#" title="显示侧边栏"></a></div>
+
+  <div id="toc" class="toc-aside">
+  <strong class="toc-title">文章目录</strong>
+ 
+ 
+ 
+  </div>
 
 <div id="asidepart">
 <div class="closeaside"><a class="closebutton" href="#" title="隐藏侧边栏"></a></div>
@@ -484,12 +331,69 @@ $(document).ready(function(){
       m.removeClass('moveMain');
       a.css('display', 'block').removeClass('fadeOut');
       o.css('display', 'none');
+      
+      $('#toc.toc-aside').css('display', 'none');
         
     }
   });
 });
 </script>
 
+<script type="text/javascript">
+$(document).ready(function(){ 
+  var ai = $('.article-content>iframe'),
+      ae = $('.article-content>embed'),
+      t  = $('#toc'),
+      ta = $('#toc.toc-aside'),
+      o  = $('.openaside'),
+      c  = $('.closeaside');
+  if(ai.length>0){
+    ai.wrap('<div class="video-container" />');
+  };
+  if(ae.length>0){
+   ae.wrap('<div class="video-container" />');
+  };
+  c.click(function(){
+    ta.css('display', 'block').addClass('fadeIn');
+  });
+  o.click(function(){
+    ta.css('display', 'none');
+  });
+  $(window).scroll(function(){
+    ta.css("top",Math.max(140,320-$(this).scrollTop()));
+  });
+});
+</script>
+
+
+<script type="text/javascript">
+$(document).ready(function(){ 
+  var $this = $('.share'),
+      url = $this.attr('data-url'),
+      encodedUrl = encodeURIComponent(url),
+      title = $this.attr('data-title'),
+      tsina = $this.attr('data-tsina'),
+      description = $this.attr('description');
+  var html = [
+  '<a href="#" class="overlay" id="qrcode"></a>',
+  '<div class="qrcode clearfix"><span>扫描二维码分享到微信朋友圈</span><a class="qrclose" href="#nothing"></a><strong>Loading...Please wait</strong><img id="qrcode-pic" data-src="http://s.jiathis.com/qrcode.php?url=' + encodedUrl + '"/></div>',
+  '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="article-share-facebook" target="_blank" title="Facebook"></a>',
+  '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="article-share-twitter" target="_blank" title="Twitter"></a>',
+  '<a href="#qrcode" class="article-share-qrcode" title="微信"></a>',
+  '<a href="http://widget.renren.com/dialog/share?resourceUrl=' + encodedUrl + '&srcUrl=' + encodedUrl + '&title=' + title +'" class="article-share-renren" target="_blank" title="人人"></a>',
+  '<a href="http://service.weibo.com/share/share.php?title='+title+'&url='+encodedUrl +'&ralateUid='+ tsina +'&searchPic=true&style=number' +'" class="article-share-weibo" target="_blank" title="微博"></a>',
+  '<span title="Share to"></span>'
+  ].join('');
+  $this.append(html);
+  $('.article-share-qrcode').click(function(){
+    var imgSrc = $('#qrcode-pic').attr('data-src');
+    $('#qrcode-pic').attr('src', imgSrc);
+    $('#qrcode-pic').load(function(){
+        $('.qrcode strong').text(' ');
+    });
+  });
+});     
+</script>
 
 
 
@@ -550,4 +454,4 @@ $(document).ready(function(){
 <!-- Tiny_search End -->
 
   </body>
- </html>
+</html>

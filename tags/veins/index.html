@@ -1,10 +1,10 @@
 
- <!DOCTYPE HTML>
+  <!DOCTYPE HTML>
 <html lang="zh-CN">
 <head>
   <meta charset="UTF-8">
   
-    <title>categories | Hey Sherlock</title>
+    <title>Tag: veins | Hey Sherlock</title>
     <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
     
     <meta name="author" content="Zhuxx">
@@ -13,12 +13,12 @@
     
     <meta name="description" content="Just write and br better.">
 <meta property="og:type" content="website">
-<meta property="og:title" content="categories">
-<meta property="og:url" content="http://zhuxxsherlocked.githuub.io/categories/index.html">
+<meta property="og:title" content="Hey Sherlock">
+<meta property="og:url" content="http://zhuxxsherlocked.githuub.io/tags/veins/index.html">
 <meta property="og:site_name" content="Hey Sherlock">
 <meta property="og:description" content="Just write and br better.">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="categories">
+<meta name="twitter:title" content="Hey Sherlock">
 <meta name="twitter:description" content="Just write and br better.">
 
     
@@ -73,19 +73,31 @@
 </div>
       </header>
       <div id="container">
-          
+        
+
 <div class="archive-title" >
-<h2 class="category-icon">分类</h2>
-
-<a data-src="/categories/学习/" href="#学习" title="学习">学习<sup>2</sup></a>
-
-<a data-src="/categories/随笔生活/" href="#随笔生活" title="随笔生活">随笔生活<sup>2</sup></a>
-
+  <h2 class="tag-icon">veins</h2>
+  
 </div>
-<div id="main" class="archive-part">
-<div class="all-list-box"></div>
-</div>
+<div id="main" class="archive-part clearfix">
+  <div id="archive-page">
 
+  <section class="post" itemscope itemprop="blogPost">
+  
+    <a href="/2015/05/29/Veins-SUMO学习（一）/" title="Veins SUMO学习（一）" itemprop="url">
+  
+
+    <time datetime="2015-05-29T07:41:38.000Z" itemprop="datePublished">2015-05-29</time>
+
+
+    <h1 itemprop="name">Veins SUMO学习（一）</h1>
+
+  </a>
+</section>
+
+
+  </div>
+</div>
 
       </div>
       <footer><div id="footer" >
@@ -187,24 +199,6 @@ $(document).ready(function(){
 
 
 
-
-<script type="text/javascript">
-$(document).ready(function(){ 
-  var list    = $('.archive-title a'),
-      box     = $('.all-list-box'),
-      first   = $('.archive-title a:first-of-type');
-      box.load(first.attr('data-src').toString()+' #archive-page');
-      first.addClass('current');
-  list.each(function(){
-    $(this).click(function(){
-      var listSrc=$(this).attr('data-src').toString()+' #archive-page';
-      box.load(listSrc);
-      list.removeClass('current');
-      $(this).addClass('current');
-     });  
-    });
-  }); 
-</script>
 
 
 <link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
