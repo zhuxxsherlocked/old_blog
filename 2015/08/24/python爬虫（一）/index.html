@@ -1,0 +1,476 @@
+
+ <!DOCTYPE HTML>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  
+    <title>python爬虫（一） | Hey Sherlock</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
+    
+    <meta name="author" content="Zhuxx">
+    
+
+    
+    <meta name="description" content="项目经历参加校内Data Analyst Club组织的飞谷大数据项目第五期，利用Python爬虫。基本完成。具体项目要求细节参见飞谷项目五期说明。我负责爬取的是互联网金融P2P网站—-汇纳财富。老师已经把scrapy框架之类的写好了，我们主要做的是根据自己网站的实际情况修改一下爬取的标志。我是7组的小组长，第一次接触爬虫，能够基本爬出来自己还比较满意。也多亏之前看了一些HTML与CSS。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="python爬虫（一）">
+<meta property="og:url" content="http://zhuxxsherlocked.githuub.io/2015/08/24/python爬虫（一）/index.html">
+<meta property="og:site_name" content="Hey Sherlock">
+<meta property="og:description" content="项目经历参加校内Data Analyst Club组织的飞谷大数据项目第五期，利用Python爬虫。基本完成。具体项目要求细节参见飞谷项目五期说明。我负责爬取的是互联网金融P2P网站—-汇纳财富。老师已经把scrapy框架之类的写好了，我们主要做的是根据自己网站的实际情况修改一下爬取的标志。我是7组的小组长，第一次接触爬虫，能够基本爬出来自己还比较满意。也多亏之前看了一些HTML与CSS。">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="python爬虫（一）">
+<meta name="twitter:description" content="项目经历参加校内Data Analyst Club组织的飞谷大数据项目第五期，利用Python爬虫。基本完成。具体项目要求细节参见飞谷项目五期说明。我负责爬取的是互联网金融P2P网站—-汇纳财富。老师已经把scrapy框架之类的写好了，我们主要做的是根据自己网站的实际情况修改一下爬取的标志。我是7组的小组长，第一次接触爬虫，能够基本爬出来自己还比较满意。也多亏之前看了一些HTML与CSS。">
+
+    
+    <link rel="alternative" href="/atom.xml" title="Hey Sherlock" type="application/atom+xml">
+    
+    
+    <link rel="icon" href="/img/s.ico">
+    
+    
+    <link rel="apple-touch-icon" href="/img/s.jpg">
+    <link rel="apple-touch-icon-precomposed" href="/img/s.jpg">
+    
+    <link rel="stylesheet" href="/css/style.css" type="text/css">
+</head>
+
+  <body>
+    <header>
+      
+<div>
+		
+			<div id="imglogo">
+				<a href="/"><img src="/img/s.png" alt="Hey Sherlock" title="Hey Sherlock"/></a>
+			</div>
+			
+			<div id="textlogo">
+				<h1 class="site-name"><a href="/" title="Hey Sherlock">Hey Sherlock</a></h1>
+				<h2 class="blog-motto">Zhuxx&#39;s blog</h2>
+			</div>
+			<div class="navbar"><a class="navbutton navmobile" href="#" title="菜单">
+			</a></div>
+			<nav class="animated">
+				<ul>
+					<ul>
+					 
+						<li><a href="/">Home</a></li>
+					
+						<li><a href="/archives">Archives</a></li>
+					
+						<li><a href="/about">About</a></li>
+					
+					<li>
+ 					
+					<form class="search" action="//google.com/search" method="get" accept-charset="utf-8">
+						<label>Search</label>
+						<input type="search" id="search" name="q" autocomplete="off" maxlength="20" placeholder="搜索" />
+						<input type="hidden" name="q" value="site:zhuxxsherlocked.githuub.io">
+					</form>
+					
+					</li>
+				</ul>
+			</nav>			
+</div>
+    </header>
+    <div id="container">
+      <div id="main" class="post" itemscope itemprop="blogPost">
+  
+	<article itemprop="articleBody"> 
+		<header class="article-info clearfix">
+  <h1 itemprop="name">
+    
+      <a href="/2015/08/24/python爬虫（一）/" title="python爬虫（一）" itemprop="url">python爬虫（一）</a>
+  </h1>
+  <p class="article-author">By
+       
+		<a href="http://zhuxxsherlocked.githuub.io/about" title="Zhuxx" target="_blank" itemprop="author">Zhuxx</a>
+		
+  <p class="article-time">
+    <time datetime="2015-08-24T01:58:17.000Z" itemprop="datePublished"> 发表于 2015-08-24</time>
+    
+  </p>
+</header>
+	<div class="article-content">
+		
+		<div id="toc" class="toc-article">
+			<strong class="toc-title">文章目录</strong>
+		
+			<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#项目经历"><span class="toc-number">1.</span> <span class="toc-text">项目经历</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#笔记"><span class="toc-number">1.1.</span> <span class="toc-text">笔记</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Python爬虫框架Scrapy"><span class="toc-number">2.</span> <span class="toc-text">Python爬虫框架Scrapy</span></a></li></ol>
+		
+		</div>
+		
+		<h2 id="项目经历">项目经历</h2><p>参加校内Data Analyst Club组织的飞谷大数据项目第五期，利用Python爬虫。基本完成。<br>具体项目要求细节参见<a href="http://7xjcml.com1.z0.glb.clouddn.com/%E9%A3%9E%E8%B0%B7%E9%A1%B9%E7%9B%AE5%E6%9C%9F%E9%9C%80%E6%B1%82%E8%AF%B4%E6%98%8E.pdf" target="_blank" rel="external">飞谷项目五期说明</a>。<br>我负责爬取的是互联网金融P2P网站—-汇纳财富。老师已经把scrapy框架之类的写好了，我们主要做的是根据自己网站的实际情况修改一下爬取的标志。<br>我是7组的小组长，第一次接触爬虫，能够基本爬出来自己还比较满意。也多亏之前看了一些HTML与CSS。<br><a id="more"></a></p>
+<h3 id="笔记">笔记</h3><p><em>（抓取帖子视频笔记 和我具体爬的有所不同）</em><br>1 这次也接触了一下linux操作环境，以及xshell xftp工具。<br>查版本 python -v   scrapy version<br>ls ll cat（进入？） cd .. （退出）</p>
+<p>2 抓取过程<br>抓取网站首先要知道网址：<br>不要从首页开始抓 可以利用搜索特定关键字keyword 可以替换</p>
+<p><strong>link -&gt; 抓取帖子地址</strong><br>他的输出是：各个帖子的地址</p>
+<p>link：link文件夹 scrapy.cfg（配置文件）<br>link文件夹： <em>init</em>.py(c)  items.py pipelines.py settings.py(c) spiders文件夹</p>
+<figure class="highlight puppet"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#### item.py ####</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#定义存放链接的类</span></span><br><span class="line"><span class="keyword"><span class="keyword">class</span> <span class="title">LinkItem</span>（<span class="title">Item</span>):</span></span><br><span class="line"><span class="comment">#链接内容</span></span><br><span class="line"><span class="literal">link</span> = <span class="constant">Field</span>（）</span><br><span class="line"><span class="comment">#链接新闻的发布时间</span></span><br><span class="line">pubdate = <span class="constant">Field</span>（）</span><br><span class="line"></span><br><span class="line"><span class="comment">#### link_spider ####</span></span><br><span class="line"><span class="keyword"><span class="keyword">class</span> <span class="title">LinkSpider</span></span></span><br><span class="line"></span><br><span class="line">def parse(self, response)</span><br><span class="line">    hxs = <span class="constant">Html</span>XPathSelector(response)   //scrapy提供</span><br><span class="line">    <span class="literal">links</span> = hxs.select(<span class="string">'//h3@[class="had_news_title"]/a/@href'</span>).extract()    <span class="comment">## 修饰符 这里只要href属性</span></span><br><span class="line">    newslink = <span class="string">''</span></span><br><span class="line">    </span><br><span class="line">    for <span class="literal">link</span> <span class="keyword">in</span> <span class="literal">links</span>:  <span class="comment">## links是一个集合</span></span><br><span class="line">        newslink = newslink + <span class="literal">link</span> + <span class="string">'\r\n'</span></span><br><span class="line">    open(<span class="string">'../output/link_output/link.txt'</span>,<span class="string">'wb'</span>).write(newslink)</span><br></pre></td></tr></table></figure>
+<p>测试：<br>运行时一定找到和scrapy.cfg同级的目录<br>scrapy crawl link（爬虫的名字）<br>爬虫的名字在scrapy.cfg<br>referer：None 一般是没有问题</p>
+<p><strong>page -&gt; 抓取每个帖子具体内容</strong><br>爬虫目的识别出这些帖子</p>
+<p>page的输入是link.txt文本文件，依次把里面的每个链接进行抓取，输出是帖子对应的xml文件（json）。</p>
+<figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#### item.py ####</span></span><br><span class="line"><span class="comment">#定义存放链接的类</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">LinkItem</span>（<span class="title">Item</span>):</span></span><br><span class="line"><span class="comment">#网站标识 描述 地址</span></span><br><span class="line">... = <span class="constant">Field</span>（）</span><br><span class="line"></span><br><span class="line"><span class="comment">#### page_spider ####</span></span><br><span class="line"></span><br><span class="line">start_urls = []  <span class="comment">##数组 Python可用动态数组  </span></span><br><span class="line"></span><br><span class="line">fileid = response.url.spilit(<span class="string">"/"</span>)[-<span class="number">1</span>] <span class="comment">## http://www.csdn.net/article/2014-12-13/2823105  执行结果是2823105.xml</span></span><br><span class="line"></span><br><span class="line">title = hxs.select(<span class="string">'//h1[@class="title"]/text()'</span>).extract()[<span class="number">0</span>].encode(<span class="string">'utf-8'</span>)  </span><br><span class="line"><span class="comment">## /text()取文本 [0]取第0个元素，不一定存在，需要尝试 如果标志有2个 取数组的第几个元素</span></span><br><span class="line"><span class="comment">## 增强健壮性</span></span><br><span class="line"><span class="comment">##tit = hxs.select('//h1[<span class="yardoctag">@class</span>="title"]/text()').extract()</span></span><br><span class="line"><span class="comment">##if len(tit)&gt;0:</span></span><br><span class="line"><span class="comment">##   title= tit[0]</span></span><br></pre></td></tr></table></figure>
+<p>抓取结束后，是把内容写在了pipeline.py指定的xml文件中<br>web page -&gt; xml -&gt;feigu bbs</p>
+<hr>
+<h2 id="Python爬虫框架Scrapy">Python爬虫框架Scrapy</h2><p>当然只做了飞谷的项目是远远不够的，还需要加深对scrapy的理解。</p>
+<blockquote>
+<p>所谓网络爬虫，就是一个在网上到处或定向抓取数据的程序，当然，这种说法不够专业，更专业的描述就是，抓取特定网站网页的HTML数据。不过由于一个网站的网页很多，而我们又不可能事先知道所有网页的URL地址，所以，如何保证我们抓取到了网站的所有HTML页面就是一个有待考究的问题了。<strong>一般的方法是，定义一个入口页面，然后一般一个页面会有其他页面的URL，于是从当前页面获取到这些URL加入到爬虫的抓取队列中，然后进入到新页面后再递归的进行上述的操作，其实说来就跟深度遍历或广度遍历一样。</strong></p>
+</blockquote>
+<p>scrapy.cfg: 项目配置文件</p>
+<p>items.py: 需要提取的数据结构定义文件</p>
+<p>pipelines.py:管道定义，用来对items里面提取的数据做进一步处理，如保存等</p>
+<p>settings.py: 爬虫配置文件</p>
+<p>spiders: 放置spider的目录</p>
+<ol>
+<li><a href="http://blog.csdn.net/HanTangSongMing/article/details/24454453" target="_blank" rel="external"> Python爬虫框架Scrapy实战之定向批量获取职位招聘信息 </a></li>
+</ol>
+  
+	</div>
+		<footer class="article-footer clearfix">
+<div class="article-catetags">
+
+<div class="article-categories">
+  <span></span>
+  <a class="article-category-link" href="/categories/Python/">Python</a>
+</div>
+
+
+  <div class="article-tags">
+  
+  <span></span> <a href="/tags/Python/">Python</a><a href="/tags/scrapy/">scrapy</a><a href="/tags/爬虫/">爬虫</a>
+  </div>
+
+</div>
+
+
+
+	<div class="article-share" id="share">
+	
+	  <div data-url="http://zhuxxsherlocked.githuub.io/2015/08/24/python爬虫（一）/" data-title="python爬虫（一） | Hey Sherlock" data-tsina="1576552057" class="share clearfix">
+	  </div>
+	
+	</div>
+
+
+</footer>
+
+   	       
+	</article>
+	
+<nav class="article-nav clearfix">
+ 
+
+<div class="next">
+<a href="/2015/08/19/暑期生活（二）/"  title="暑期生活（二）">
+ <strong>下一篇：</strong><br/> 
+ <span>暑期生活（二）
+</span>
+</a>
+</div>
+
+</nav>
+
+	
+
+</div>  
+      <div class="openaside"><a class="navbutton" href="#" title="显示侧边栏"></a></div>
+
+  <div id="toc" class="toc-aside">
+  <strong class="toc-title">文章目录</strong>
+ 
+ <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#项目经历"><span class="toc-number">1.</span> <span class="toc-text">项目经历</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#笔记"><span class="toc-number">1.1.</span> <span class="toc-text">笔记</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Python爬虫框架Scrapy"><span class="toc-number">2.</span> <span class="toc-text">Python爬虫框架Scrapy</span></a></li></ol>
+ 
+  </div>
+
+<div id="asidepart">
+<div class="closeaside"><a class="closebutton" href="#" title="隐藏侧边栏"></a></div>
+<aside class="clearfix">
+
+  
+<div class="categorieslist">
+	<p class="asidetitle">分类</p>
+		<ul>
+		
+		  
+			<li><a href="/categories/Python/" title="Python">Python<sup>2</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/学习/" title="学习">学习<sup>2</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/随笔生活/" title="随笔生活">随笔生活<sup>4</sup></a></li>
+		  
+		
+		</ul>
+</div>
+
+
+  
+<div class="tagslist">
+	<p class="asidetitle">标签</p>
+		<ul class="clearfix">
+		
+			
+				<li><a href="/tags/随笔/" title="随笔">随笔<sup>3</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Python/" title="Python">Python<sup>2</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/scrapy/" title="scrapy">scrapy<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/爬虫/" title="爬虫">爬虫<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/hexo/" title="hexo">hexo<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/情感/" title="情感">情感<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/sumo/" title="sumo">sumo<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/veins/" title="veins">veins<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/omnet/" title="omnet++">omnet++<sup>1</sup></a></li>
+			
+		
+		</ul>
+</div>
+
+
+  <div class="weiboshow">
+  <p class="asidetitle">新浪微博</p>
+    <iframe width="100%" height="119" class="share_self"  frameborder="0" scrolling="no" src="http://widget.weibo.com/weiboshow/index.php?language=&width=0&height=119&fansRow=2&ptype=1&speed=0&skin=9&isTitle=1&noborder=1&isWeibo=0&isFans=0&uid=1576552057&verifier=a6902c2e&dpc=1"></iframe>
+</div>
+
+
+  <div class="rsspart">
+	<a href="/atom.xml" target="_blank" title="rss">RSS 订阅</a>
+</div>
+
+</aside>
+</div>
+    </div>
+    <footer><div id="footer" >
+	
+	<div class="line">
+		<span></span>
+		<div class="author"></div>
+	</div>
+	
+	
+	<section class="info">
+		<p> Hello, I&#39;m Zhu Xiaoxi, a graduate student from SJTU. <br/>
+			This is my blog, believe it or not.</p>
+	</section>
+	 
+	<div class="social-font" class="clearfix">
+		
+		<a href="http://weibo.com/1576552057" target="_blank" class="icon-weibo" title="微博"></a>
+		
+		
+		<a href="https://github.com/zhuxxsherlocked" target="_blank" class="icon-github" title="github"></a>
+		
+		
+		
+		
+		
+		
+		
+		<a href="https://www.zhihu.com/people/sherlock-hey" target="_blank" class="icon-zhihu" title="知乎"></a>
+		
+		
+		
+	</div>
+			
+		
+
+		<p class="copyright">
+		Powered by <a href="http://hexo.io" target="_blank" title="hexo">hexo</a> and Theme by <a href="https://github.com/wuchong/jacman" target="_blank" title="Jacman">Jacman</a> © 2015 
+		
+		<a href="http://zhuxxsherlocked.githuub.io/about" target="_blank" title="Zhuxx">Zhuxx</a>
+		
+		
+		</p>
+</div>
+</footer>
+    <script src="/js/jquery-2.0.3.min.js"></script>
+<script src="/js/jquery.imagesloaded.min.js"></script>
+<script src="/js/gallery.js"></script>
+
+<script type="text/javascript">
+$(document).ready(function(){ 
+  $('.navbar').click(function(){
+    $('header nav').toggleClass('shownav');
+  });
+  var myWidth = 0;
+  function getSize(){
+    if( typeof( window.innerWidth ) == 'number' ) {
+      myWidth = window.innerWidth;
+    } else if( document.documentElement && document.documentElement.clientWidth) {
+      myWidth = document.documentElement.clientWidth;
+    };
+  };
+  var m = $('#main'),
+      a = $('#asidepart'),
+      c = $('.closeaside'),
+      o = $('.openaside');
+  c.click(function(){
+    a.addClass('fadeOut').css('display', 'none');
+    o.css('display', 'block').addClass('fadeIn');
+    m.addClass('moveMain');
+  });
+  o.click(function(){
+    o.css('display', 'none').removeClass('beforeFadeIn');
+    a.css('display', 'block').removeClass('fadeOut').addClass('fadeIn');      
+    m.removeClass('moveMain');
+  });
+  $(window).scroll(function(){
+    o.css("top",Math.max(80,260-$(this).scrollTop()));
+  });
+  
+  $(window).resize(function(){
+    getSize(); 
+    if (myWidth >= 1024) {
+      $('header nav').removeClass('shownav');
+    }else{
+      m.removeClass('moveMain');
+      a.css('display', 'block').removeClass('fadeOut');
+      o.css('display', 'none');
+      
+      $('#toc.toc-aside').css('display', 'none');
+        
+    }
+  });
+});
+</script>
+
+<script type="text/javascript">
+$(document).ready(function(){ 
+  var ai = $('.article-content>iframe'),
+      ae = $('.article-content>embed'),
+      t  = $('#toc'),
+      ta = $('#toc.toc-aside'),
+      o  = $('.openaside'),
+      c  = $('.closeaside');
+  if(ai.length>0){
+    ai.wrap('<div class="video-container" />');
+  };
+  if(ae.length>0){
+   ae.wrap('<div class="video-container" />');
+  };
+  c.click(function(){
+    ta.css('display', 'block').addClass('fadeIn');
+  });
+  o.click(function(){
+    ta.css('display', 'none');
+  });
+  $(window).scroll(function(){
+    ta.css("top",Math.max(140,320-$(this).scrollTop()));
+  });
+});
+</script>
+
+
+<script type="text/javascript">
+$(document).ready(function(){ 
+  var $this = $('.share'),
+      url = $this.attr('data-url'),
+      encodedUrl = encodeURIComponent(url),
+      title = $this.attr('data-title'),
+      tsina = $this.attr('data-tsina'),
+      description = $this.attr('description');
+  var html = [
+  '<a href="#" class="overlay" id="qrcode"></a>',
+  '<div class="qrcode clearfix"><span>扫描二维码分享到微信朋友圈</span><a class="qrclose" href="#nothing"></a><strong>Loading...Please wait</strong><img id="qrcode-pic" data-src="http://s.jiathis.com/qrcode.php?url=' + encodedUrl + '"/></div>',
+  '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="article-share-facebook" target="_blank" title="Facebook"></a>',
+  '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="article-share-twitter" target="_blank" title="Twitter"></a>',
+  '<a href="#qrcode" class="article-share-qrcode" title="微信"></a>',
+  '<a href="http://widget.renren.com/dialog/share?resourceUrl=' + encodedUrl + '&srcUrl=' + encodedUrl + '&title=' + title +'" class="article-share-renren" target="_blank" title="人人"></a>',
+  '<a href="http://service.weibo.com/share/share.php?title='+title+'&url='+encodedUrl +'&ralateUid='+ tsina +'&searchPic=true&style=number' +'" class="article-share-weibo" target="_blank" title="微博"></a>',
+  '<span title="Share to"></span>'
+  ].join('');
+  $this.append(html);
+  $('.article-share-qrcode').click(function(){
+    var imgSrc = $('#qrcode-pic').attr('data-src');
+    $('#qrcode-pic').attr('src', imgSrc);
+    $('#qrcode-pic').load(function(){
+        $('.qrcode strong').text(' ');
+    });
+  });
+});     
+</script>
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){ 
+  $('.article-content').each(function(i){
+    $(this).find('img').each(function(){
+      if ($(this).parent().hasClass('fancybox')) return;
+      var alt = this.alt;
+      if (alt) $(this).after('<span class="caption">' + alt + '</span>');
+      $(this).wrap('<a href="' + this.src + '" title="' + alt + '" class="fancybox"></a>');
+    });
+    $(this).find('.fancybox').each(function(){
+      $(this).attr('rel', 'article' + i);
+    });
+  });
+  if($.fancybox){
+    $('.fancybox').fancybox();
+  }
+}); 
+</script>
+
+
+
+<!-- Analytics Begin -->
+
+
+
+
+
+<!-- Analytics End -->
+
+<!-- Totop Begin -->
+
+	<div id="totop">
+	<a title="返回顶部"><img src="/img/scrollup.png"/></a>
+	</div>
+	<script src="/js/totop.js"></script>
+
+<!-- Totop End -->
+
+<!-- MathJax Begin -->
+<!-- mathjax config similar to math.stackexchange -->
+
+
+<!-- MathJax End -->
+
+<!-- Tiny_search Begin -->
+
+<!-- Tiny_search End -->
+
+  </body>
+</html>
