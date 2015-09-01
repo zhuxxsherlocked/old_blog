@@ -4,22 +4,40 @@
 <head>
   <meta charset="UTF-8">
   
-    <title>Hey Sherlock</title>
+    <title>一大波数正在靠近——排序 | Hey Sherlock</title>
     <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
     
     <meta name="author" content="Zhuxx">
     
 
     
-    <meta name="description" content="Just write and be better.">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Hey Sherlock">
-<meta property="og:url" content="http://zhuxxsherlocked.githuub.io/index.html">
+    <meta name="description" content="最快最简单的排序——桶排序1956年 E.J.Issac和R.C.Singleton。事先要知道要排序的所有值，摆出所有的容器，出现一次，对于容器数值加一，然后按顺序排布。容器用数组表示。
+现在的不是真正的桶排序。也不算是个排序，若是将学生分数进行排序，只能排学生的分数，不能和名字对应起来。
+浪费空间严重！
+&amp;lt;!--read--&amp;gt;
+
+12345678910111213141516171819202">
+<meta property="og:type" content="article">
+<meta property="og:title" content="一大波数正在靠近——排序">
+<meta property="og:url" content="http://zhuxxsherlocked.githuub.io/2015/09/01/一大波数正在靠近——排序/index.html">
 <meta property="og:site_name" content="Hey Sherlock">
-<meta property="og:description" content="Just write and be better.">
+<meta property="og:description" content="最快最简单的排序——桶排序1956年 E.J.Issac和R.C.Singleton。事先要知道要排序的所有值，摆出所有的容器，出现一次，对于容器数值加一，然后按顺序排布。容器用数组表示。
+现在的不是真正的桶排序。也不算是个排序，若是将学生分数进行排序，只能排学生的分数，不能和名字对应起来。
+浪费空间严重！
+&amp;lt;!--read--&amp;gt;
+
+12345678910111213141516171819202">
+<meta property="og:image" content="http://7xjcml.com1.z0.glb.clouddn.com/%E6%A1%B6%E6%8E%92%E5%BA%8F.png">
+<meta property="og:image" content="http://7xjcml.com1.z0.glb.clouddn.com/%E5%86%92%E6%B3%A1%E6%8E%92%E5%BA%8F.png">
+<meta property="og:image" content="http://7xjcml.com1.z0.glb.clouddn.com/%E5%BF%AB%E9%80%9F%E6%8E%92%E5%BA%8F.png">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hey Sherlock">
-<meta name="twitter:description" content="Just write and be better.">
+<meta name="twitter:title" content="一大波数正在靠近——排序">
+<meta name="twitter:description" content="最快最简单的排序——桶排序1956年 E.J.Issac和R.C.Singleton。事先要知道要排序的所有值，摆出所有的容器，出现一次，对于容器数值加一，然后按顺序排布。容器用数组表示。
+现在的不是真正的桶排序。也不算是个排序，若是将学生分数进行排序，只能排学生的分数，不能和名字对应起来。
+浪费空间严重！
+&amp;lt;!--read--&amp;gt;
+
+12345678910111213141516171819202">
 
     
     <link rel="alternative" href="/atom.xml" title="Hey Sherlock" type="application/atom+xml">
@@ -73,12 +91,10 @@
 </div>
     </header>
     <div id="container">
-      <div id="main">
-
-   
-    
-    <article class="post-expand post" itemprop="articleBody"> 
-        <header class="article-info clearfix">
+      <div id="main" class="post" itemscope itemprop="blogPost">
+  
+	<article itemprop="articleBody"> 
+		<header class="article-info clearfix">
   <h1 itemprop="name">
     
       <a href="/2015/09/01/一大波数正在靠近——排序/" title="一大波数正在靠近——排序" itemprop="url">一大波数正在靠近——排序</a>
@@ -92,9 +108,16 @@
     
   </p>
 </header>
-    <div class="article-content">
-        
-        <h2 id="最快最简单的排序——桶排序">最快最简单的排序——桶排序</h2><p>1956年 E.J.Issac和R.C.Singleton。<br>事先要知道要排序的所有值，摆出所有的容器，出现一次，对于容器数值加一，然后按顺序排布。<br>容器用数组表示。</p>
+	<div class="article-content">
+		
+		<div id="toc" class="toc-article">
+			<strong class="toc-title">文章目录</strong>
+		
+			<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#最快最简单的排序——桶排序"><span class="toc-number">1.</span> <span class="toc-text">最快最简单的排序——桶排序</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#算法复杂度"><span class="toc-number">1.1.</span> <span class="toc-text">算法复杂度</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#运行时出现的问题"><span class="toc-number">1.2.</span> <span class="toc-text">运行时出现的问题</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#冒泡排序"><span class="toc-number">2.</span> <span class="toc-text">冒泡排序</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#算法复杂度-1"><span class="toc-number">2.1.</span> <span class="toc-text">算法复杂度</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#快速排序"><span class="toc-number">3.</span> <span class="toc-text">快速排序</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#算法复杂度-2"><span class="toc-number">3.1.</span> <span class="toc-text">算法复杂度</span></a></li></ol></li></ol>
+		
+		</div>
+		
+		<h2 id="最快最简单的排序——桶排序">最快最简单的排序——桶排序</h2><p>1956年 E.J.Issac和R.C.Singleton。<br>事先要知道要排序的所有值，摆出所有的容器，出现一次，对于容器数值加一，然后按顺序排布。<br>容器用数组表示。</p>
 <p>现在的不是真正的桶排序。也不算是个排序，若是将学生分数进行排序，只能排学生的分数，不能和名字对应起来。</p>
 <p>浪费空间严重！</p>
 <!--read-->
@@ -124,14 +147,9 @@
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//快速排序</span></span><br><span class="line"><span class="preprocessor">#<span class="keyword">include</span>&lt;stdio.h&gt;</span></span><br><span class="line"><span class="keyword">int</span> a[<span class="number">101</span>], n;</span><br><span class="line"></span><br><span class="line"><span class="comment">//left right是下标值</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">quicksort</span><span class="params">(<span class="keyword">int</span> left, <span class="keyword">int</span> right)</span></span><br><span class="line"></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> i, j, t, temp;</span><br><span class="line">	<span class="keyword">if</span> (left &gt; right)</span><br><span class="line">		<span class="keyword">return</span>;</span><br><span class="line"></span><br><span class="line">	temp = a[left];</span><br><span class="line">	i = left;</span><br><span class="line">	j = right;</span><br><span class="line">	<span class="keyword">while</span> (i != j)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="comment">//顺序很重要，要先从右往走找</span></span><br><span class="line">		<span class="keyword">while</span> (a[j] &gt;= temp &amp;&amp; i &lt; j)</span><br><span class="line">			j--;</span><br><span class="line">		<span class="comment">//再从左往右找</span></span><br><span class="line">		<span class="keyword">while</span> (a[i] &lt;= temp &amp;&amp; i &lt; j)</span><br><span class="line">			i++;</span><br><span class="line"></span><br><span class="line">		<span class="comment">//交换两个数在数组中的位置</span></span><br><span class="line">		<span class="keyword">if</span> (i &lt; j) <span class="comment">//当哨兵i和哨兵j没有相遇</span></span><br><span class="line">		&#123;</span><br><span class="line">			t = a[i];</span><br><span class="line">			a[i] = a[j];</span><br><span class="line">			a[j] = t;</span><br><span class="line">		&#125;</span><br><span class="line"></span><br><span class="line">	&#125;</span><br><span class="line">	<span class="comment">//最终将基准归位</span></span><br><span class="line">	a[left] = a[i];</span><br><span class="line">	a[i] = temp;</span><br><span class="line"></span><br><span class="line">	quicksort(left, i - <span class="number">1</span>); <span class="comment">//继续处理左边的，递归过程</span></span><br><span class="line">	quicksort(i + <span class="number">1</span>,right); <span class="comment">//继续处理右边的，递归过程</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span><br><span class="line"></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> i, j, t;</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"请输入排序个数："</span>);</span><br><span class="line">	<span class="built_in">scanf</span>(<span class="string">"%d"</span>, &amp;n);</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"请输入数值："</span>);</span><br><span class="line">	<span class="keyword">for</span> (i = <span class="number">1</span>; i &lt;= n; i++)</span><br><span class="line">		<span class="built_in">scanf</span>(<span class="string">"%d"</span>, &amp;a[i]);</span><br><span class="line"></span><br><span class="line">	quicksort(<span class="number">1</span>, n);</span><br><span class="line"></span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"排序后结果："</span>);</span><br><span class="line">	<span class="keyword">for</span> (i = <span class="number">1</span>; i &lt;= n; i++)</span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">"%d "</span>, a[i]);</span><br><span class="line"></span><br><span class="line">	getchar(); getchar();</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>结果运行：<br><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">输入：</span><br><span class="line">10</span><br><span class="line">6 1 2 7 9 3 4 5 10 8</span><br><span class="line"></span><br><span class="line">结果：</span><br><span class="line">1 2 3 4 5 6 7 8 9 10</span><br></pre></td></tr></table></figure></p>
 <h3 id="算法复杂度-2">算法复杂度</h3><p>最差时间复杂度：O（N^2)<br>最好时间复杂度：O（NlogN）</p>
-
-        
-        
-        <p class="article-more-link">
-          
-       </p>
-    </div>
-    <footer class="article-footer clearfix">
+  
+	</div>
+		<footer class="article-footer clearfix">
 <div class="article-catetags">
 
 <div class="article-categories">
@@ -149,580 +167,43 @@
 
 
 
-
-<div class="comments-count">
+	<div class="article-share" id="share">
 	
-</div>
+	  <div data-url="http://zhuxxsherlocked.githuub.io/2015/09/01/一大波数正在靠近——排序/" data-title="一大波数正在靠近——排序 | Hey Sherlock" data-tsina="1576552057" class="share clearfix">
+	  </div>
+	
+	</div>
+
 
 </footer>
 
-
-    </article>
-
-
-
-
-
-
-   
-    
-    <article class="post-expand post" itemprop="articleBody"> 
-        <header class="article-info clearfix">
-  <h1 itemprop="name">
-    
-      <a href="/2015/08/30/警示/" title="警示" itemprop="url">警示</a>
-  </h1>
-  <p class="article-author">By
-       
-		<a href="http://zhuxxsherlocked.githuub.io/about" title="Zhuxx" target="_blank" itemprop="author">Zhuxx</a>
-		
-  <p class="article-time">
-    <time datetime="2015-08-30T07:23:06.000Z" itemprop="datePublished"> 发表于 2015-08-30</time>
-    
-  </p>
-</header>
-    <div class="article-content">
-        
-        <p>这几天心情又很忙乱。<br>要学的太多，不会的太多，而我现在越来越意识到自己并不专一，好多事都想铺开，却每个都没什么进展。</p>
-<p>这半年，真的不要去想什么实习了。<br>不然，什么都做不好。</p>
-<p>我觉得技能学习什么的并行展开吧，单一开展我觉得不适合此时的状态。</p>
-<p>1 python 2小时<br>2 数据库 2小时<br>3 算法   2小时<br>4 实验室及其他</p>
-<p>生活什么的，规律规律规律，重要的事情说三遍！<br>12点前睡，8点前醒，吃早饭，睡前阅读。</p>
-
-        
-        
-        <p class="article-more-link">
-          
-       </p>
-    </div>
-    <footer class="article-footer clearfix">
-<div class="article-catetags">
-
-<div class="article-categories">
-  <span></span>
-  <a class="article-category-link" href="/categories/杂念/">杂念</a>
-</div>
-
-
-</div>
-
-
-
-
-<div class="comments-count">
+   	       
+	</article>
 	
+<nav class="article-nav clearfix">
+ 
+
+<div class="next">
+<a href="/2015/08/30/警示/"  title="警示">
+ <strong>下一篇：</strong><br/> 
+ <span>警示
+</span>
+</a>
 </div>
 
-</footer>
+</nav>
 
-
-    </article>
-
-
-
-
-
-
-   
-    
-    <article class="post-expand post" itemprop="articleBody"> 
-        <header class="article-info clearfix">
-  <h1 itemprop="name">
-    
-      <a href="/2015/08/24/python爬虫（一）/" title="python爬虫（一）" itemprop="url">python爬虫（一）</a>
-  </h1>
-  <p class="article-author">By
-       
-		<a href="http://zhuxxsherlocked.githuub.io/about" title="Zhuxx" target="_blank" itemprop="author">Zhuxx</a>
-		
-  <p class="article-time">
-    <time datetime="2015-08-24T01:58:17.000Z" itemprop="datePublished"> 发表于 2015-08-24</time>
-    
-  </p>
-</header>
-    <div class="article-content">
-        
-        <h2 id="项目经历">项目经历</h2><p>参加校内Data Analyst Club组织的飞谷大数据项目第五期，利用Python爬虫。基本完成。<br>具体项目要求细节参见<a href="http://7xjcml.com1.z0.glb.clouddn.com/%E9%A3%9E%E8%B0%B7%E9%A1%B9%E7%9B%AE5%E6%9C%9F%E9%9C%80%E6%B1%82%E8%AF%B4%E6%98%8E.pdf">飞谷项目五期说明</a>。<br>我负责爬取的是互联网金融P2P网站—-汇纳财富。老师已经把scrapy框架之类的写好了，我们主要做的是根据自己网站的实际情况修改一下爬取的标志。<br>我是7组的小组长，第一次接触爬虫，能够基本爬出来自己还比较满意。也多亏之前看了一些HTML与CSS。<br>
-        
-        
-        <p class="article-more-link">
-          
-            <a href="/2015/08/24/python爬虫（一）/#more">Read More</a>
-          
-       </p>
-    </div>
-    <footer class="article-footer clearfix">
-<div class="article-catetags">
-
-<div class="article-categories">
-  <span></span>
-  <a class="article-category-link" href="/categories/Python/">Python</a>
-</div>
-
-
-  <div class="article-tags">
-  
-  <span></span> <a href="/tags/Python/">Python</a><a href="/tags/scrapy/">scrapy</a><a href="/tags/爬虫/">爬虫</a>
-  </div>
-
-</div>
-
-
-
-
-<div class="comments-count">
 	
-</div>
 
-</footer>
-
-
-    </article>
-
-
-
-
-
-
-   
-    
-    <article class="post-expand post" itemprop="articleBody"> 
-        <header class="article-info clearfix">
-  <h1 itemprop="name">
-    
-      <a href="/2015/08/19/暑期生活（二）/" title="暑期生活（二）" itemprop="url">暑期生活（二）</a>
-  </h1>
-  <p class="article-author">By
-       
-		<a href="http://zhuxxsherlocked.githuub.io/about" title="Zhuxx" target="_blank" itemprop="author">Zhuxx</a>
-		
-  <p class="article-time">
-    <time datetime="2015-08-19T07:55:23.000Z" itemprop="datePublished"> 发表于 2015-08-19</time>
-    
-  </p>
-</header>
-    <div class="article-content">
-        
-        <p>今天是在家的最后一天，什么都不想做。挣扎了好久还是决定明天回去，希望不要辜负自己。把爬虫搞好，和ZL看看能不能报上那个比赛（略忐忑）。</p>
-        
-        
-        <p class="article-more-link">
-          
-            <a href="/2015/08/19/暑期生活（二）/#more">Read More</a>
-          
-       </p>
-    </div>
-    <footer class="article-footer clearfix">
-<div class="article-catetags">
-
-<div class="article-categories">
-  <span></span>
-  <a class="article-category-link" href="/categories/随笔生活/">随笔生活</a>
-</div>
-
-
-  <div class="article-tags">
-  
-  <span></span> <a href="/tags/随笔/">随笔</a>
-  </div>
-
-</div>
-
-
-
-
-<div class="comments-count">
-	
-</div>
-
-</footer>
-
-
-    </article>
-
-
-
-
-
-
-   
-    
-    <article class="post-expand post" itemprop="articleBody"> 
-        <header class="article-info clearfix">
-  <h1 itemprop="name">
-    
-      <a href="/2015/07/12/hexo部署博客的一些常用操作/" title="hexo部署博客的一些常用操作" itemprop="url">hexo部署博客的一些常用操作</a>
-  </h1>
-  <p class="article-author">By
-       
-		<a href="http://zhuxxsherlocked.githuub.io/about" title="Zhuxx" target="_blank" itemprop="author">Zhuxx</a>
-		
-  <p class="article-time">
-    <time datetime="2015-07-12T09:49:31.000Z" itemprop="datePublished"> 发表于 2015-07-12</time>
-    
-  </p>
-</header>
-    <div class="article-content">
-        
-        <h2 id="Read_more长度的控制">Read more长度的控制</h2><p>hexo的readmore 是由自己在写文章的时候设定的，在文章正文里面部分的合适位置加上<code>&lt;!-- more --&gt;</code><br>首页的预览就会到标识的位置。<a href="http://my.oschina.net/youxiachai/blog/119824">Hexo 简明入门教程</a> （找了好久啊，之前以为是主题设置的问题）</p>
-<h2 id="生成静态页面">生成静态页面</h2><p>cd 到你的init目录，执行如下命令，生成静态页面至 hexo\public\ 目录。 </p>
-<figure class="highlight gcode"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo <span class="keyword">ge</span><span class="label">nerate</span></span><br></pre></td></tr></table></figure>
-<p>命令必须在init目录下执行，否则不成功，但是也不报错。<br>当你修改文章Tag或内容，不能正确重新生成内容，可以删除 hexo\db.json 后重试，还不行就到 public 目录删除对应的文件，重新生成。 </p>
-        
-        
-        <p class="article-more-link">
-          
-            <a href="/2015/07/12/hexo部署博客的一些常用操作/#more">Read More</a>
-          
-       </p>
-    </div>
-    <footer class="article-footer clearfix">
-<div class="article-catetags">
-
-<div class="article-categories">
-  <span></span>
-  <a class="article-category-link" href="/categories/学习/">学习</a>
-</div>
-
-
-  <div class="article-tags">
-  
-  <span></span> <a href="/tags/hexo/">hexo</a>
-  </div>
-
-</div>
-
-
-
-
-<div class="comments-count">
-	
-</div>
-
-</footer>
-
-
-    </article>
-
-
-
-
-
-
-   
-    
-    <article class="post-expand post" itemprop="articleBody"> 
-        <header class="article-info clearfix">
-  <h1 itemprop="name">
-    
-      <a href="/2015/07/12/暑期生活（一）/" title="暑期生活（一）" itemprop="url">暑期生活（一）</a>
-  </h1>
-  <p class="article-author">By
-       
-		<a href="http://zhuxxsherlocked.githuub.io/about" title="Zhuxx" target="_blank" itemprop="author">Zhuxx</a>
-		
-  <p class="article-time">
-    <time datetime="2015-07-12T09:24:41.000Z" itemprop="datePublished"> 发表于 2015-07-12</time>
-    
-  </p>
-</header>
-    <div class="article-content">
-        
-        <p>考完试后，在宿舍颓废了10余天，今天终于来到了图书馆。恩，确实不一样，而且人好少呐。<br>最近日子不能说是像猪一般颓废，然而效率确实低下。<br>现在<strong>前端</strong>刚刚看完 head first html和css，接下来要看JavaScript【JavaScript DOM编程艺术】了。<br><strong>数据分析</strong>，刚刚开了个头，初始印象是还得学PYTHON，数据挖掘才是王道。说到Python，我对不起你啊！<br>如果跟着ZGQ,ZX把那个项目好好做下去，我觉得特别棒！前端，数据分析都能学习到不少。在线教育那一块我并不是太感兴趣了。<br>实验室这面呢，也算是渐渐明晰吧，就是去做数据分析，恰好也是兴趣所在。明天要去听郑宇的时空数据分析了，已经错过了三节==。<br>最近看书进展缓慢，还好已经没有什么综艺可以看了。【极限挑战 爸爸去哪儿 极速前进（待定）】<br>
-        
-        
-        <p class="article-more-link">
-          
-            <a href="/2015/07/12/暑期生活（一）/#more">Read More</a>
-          
-       </p>
-    </div>
-    <footer class="article-footer clearfix">
-<div class="article-catetags">
-
-<div class="article-categories">
-  <span></span>
-  <a class="article-category-link" href="/categories/随笔生活/">随笔生活</a>
-</div>
-
-
-  <div class="article-tags">
-  
-  <span></span> <a href="/tags/随笔/">随笔</a>
-  </div>
-
-</div>
-
-
-
-
-<div class="comments-count">
-	
-</div>
-
-</footer>
-
-
-    </article>
-
-
-
-
-
-
-   
-    
-    <article class="post-expand post" itemprop="articleBody"> 
-        <header class="article-info clearfix">
-  <h1 itemprop="name">
-    
-      <a href="/2015/05/29/Veins-SUMO学习（一）/" title="Veins SUMO学习（一）" itemprop="url">Veins SUMO学习（一）</a>
-  </h1>
-  <p class="article-author">By
-       
-		<a href="http://zhuxxsherlocked.githuub.io/about" title="Zhuxx" target="_blank" itemprop="author">Zhuxx</a>
-		
-  <p class="article-time">
-    <time datetime="2015-05-29T07:41:38.000Z" itemprop="datePublished"> 发表于 2015-05-29</time>
-    
-  </p>
-</header>
-    <div class="article-content">
-        
-        <p>十天前接触了下SUMO，碰到一堆BUG，一定要选对版本。<br>感谢CXY。<br>现在才总结表示有点呵呵。</p>
-<hr>
-<p>目的是进行交通仿真。<br>之前考虑过使用VISSIM，也买了书进行学习，但是VISSIM是商业软件，是要收费的，想画交大地图时，学生版限制在1000m，仿真时间也只有3600s，放弃。<br>CXY推荐了Veins，开源，免费。但有句话说：<em>免费的是最贵的。</em> 所以，还要下一番功夫。</p>
-<hr>
-        
-        
-        <p class="article-more-link">
-          
-            <a href="/2015/05/29/Veins-SUMO学习（一）/#more">Read More</a>
-          
-       </p>
-    </div>
-    <footer class="article-footer clearfix">
-<div class="article-catetags">
-
-<div class="article-categories">
-  <span></span>
-  <a class="article-category-link" href="/categories/学习/">学习</a>
-</div>
-
-
-  <div class="article-tags">
-  
-  <span></span> <a href="/tags/omnet/">omnet++</a><a href="/tags/sumo/">sumo</a><a href="/tags/veins/">veins</a>
-  </div>
-
-</div>
-
-
-
-
-<div class="comments-count">
-	
-</div>
-
-</footer>
-
-
-    </article>
-
-
-
-
-
-
-   
-    
-    <article class="post-expand post" itemprop="articleBody"> 
-        <header class="article-info clearfix">
-  <h1 itemprop="name">
-    
-      <a href="/2015/05/29/Python杂记/" title="Python杂记" itemprop="url">Python杂记</a>
-  </h1>
-  <p class="article-author">By
-       
-		<a href="http://zhuxxsherlocked.githuub.io/about" title="Zhuxx" target="_blank" itemprop="author">Zhuxx</a>
-		
-  <p class="article-time">
-    <time datetime="2015-05-28T16:01:10.000Z" itemprop="datePublished"> 发表于 2015-05-29</time>
-    
-  </p>
-</header>
-    <div class="article-content">
-        
-        <p>这篇是用codecademy做题时，记录的一些东西，琐碎且含金量不高。<br>太久不发博，发此篇练手。</p>
-<p>更新：加入廖雪峰python教程知识点。<br>
-        
-        
-        <p class="article-more-link">
-          
-            <a href="/2015/05/29/Python杂记/#more">Read More</a>
-          
-       </p>
-    </div>
-    <footer class="article-footer clearfix">
-<div class="article-catetags">
-
-<div class="article-categories">
-  <span></span>
-  <a class="article-category-link" href="/categories/Python/">Python</a>
-</div>
-
-
-  <div class="article-tags">
-  
-  <span></span> <a href="/tags/Python/">Python</a>
-  </div>
-
-</div>
-
-
-
-
-<div class="comments-count">
-	
-</div>
-
-</footer>
-
-
-    </article>
-
-
-
-
-
-
-   
-    
-    <article class="post-expand post" itemprop="articleBody"> 
-        <header class="article-info clearfix">
-  <h1 itemprop="name">
-    
-      <a href="/2015/04/16/Xichen-s-Words/" title="Xichen&#39;s Words" itemprop="url">Xichen&#39;s Words</a>
-  </h1>
-  <p class="article-author">By
-       
-		<a href="http://zhuxxsherlocked.githuub.io/about" title="Zhuxx" target="_blank" itemprop="author">Zhuxx</a>
-		
-  <p class="article-time">
-    <time datetime="2015-04-16T13:22:15.000Z" itemprop="datePublished"> 发表于 2015-04-16</time>
-    
-  </p>
-</header>
-    <div class="article-content">
-        
-        <p>Today, I want to write down some feelings.<br>About 7, I went to take a shower, and happened to see Wang Xichen.<br>I am so nervous because that i think she is the “goddess” of our class.</p>
-<hr>
-        
-        
-        <p class="article-more-link">
-          
-            <a href="/2015/04/16/Xichen-s-Words/#more">Read More</a>
-          
-       </p>
-    </div>
-    <footer class="article-footer clearfix">
-<div class="article-catetags">
-
-<div class="article-categories">
-  <span></span>
-  <a class="article-category-link" href="/categories/随笔生活/">随笔生活</a>
-</div>
-
-
-  <div class="article-tags">
-  
-  <span></span> <a href="/tags/情感/">情感</a>
-  </div>
-
-</div>
-
-
-
-
-<div class="comments-count">
-	
-</div>
-
-</footer>
-
-
-    </article>
-
-
-
-
-
-
-   
-    
-    <article class="post-expand post" itemprop="articleBody"> 
-        <header class="article-info clearfix">
-  <h1 itemprop="name">
-    
-      <a href="/2015/04/14/有关博客/" title="有关博客" itemprop="url">有关博客</a>
-  </h1>
-  <p class="article-author">By
-       
-		<a href="http://zhuxxsherlocked.githuub.io/about" title="Zhuxx" target="_blank" itemprop="author">Zhuxx</a>
-		
-  <p class="article-time">
-    <time datetime="2015-04-14T14:30:24.000Z" itemprop="datePublished"> 发表于 2015-04-14</time>
-    
-  </p>
-</header>
-    <div class="article-content">
-        
-        <h2 id="写在前面">写在前面</h2><p>上周组会，导师突然来了灵感，要建立我们小组的主页，而没想到的是这任务竟然落在我头上。之前从来没有接触过做网页的我，倒是现学现卖，用了06年就停止更新的FrontPage在一天内搞定了大概。如此效率的原因还是因为这个软件真的是极好上手。</p>
-<p>在决定用FrontPage之前，我还做了一番调研：为什么这个红极一时的软件没落了，以及现在正流行着什么。虽然为了尽快交差和对html语言不熟悉等原因我选了一个out的方法，WordPress却引起了我的注意，随后又引着我发现了Github Pages。</p>
-        
-        
-        <p class="article-more-link">
-          
-            <a href="/2015/04/14/有关博客/#more">Read More</a>
-          
-       </p>
-    </div>
-    <footer class="article-footer clearfix">
-<div class="article-catetags">
-
-<div class="article-categories">
-  <span></span>
-  <a class="article-category-link" href="/categories/随笔生活/">随笔生活</a>
-</div>
-
-
-  <div class="article-tags">
-  
-  <span></span> <a href="/tags/随笔/">随笔</a>
-  </div>
-
-</div>
-
-
-
-
-<div class="comments-count">
-	
-</div>
-
-</footer>
-
-
-    </article>
-
-
-
-
-
-
-
-</div>
+</div>  
       <div class="openaside"><a class="navbutton" href="#" title="显示侧边栏"></a></div>
+
+  <div id="toc" class="toc-aside">
+  <strong class="toc-title">文章目录</strong>
+ 
+ <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#最快最简单的排序——桶排序"><span class="toc-number">1.</span> <span class="toc-text">最快最简单的排序——桶排序</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#算法复杂度"><span class="toc-number">1.1.</span> <span class="toc-text">算法复杂度</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#运行时出现的问题"><span class="toc-number">1.2.</span> <span class="toc-text">运行时出现的问题</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#冒泡排序"><span class="toc-number">2.</span> <span class="toc-text">冒泡排序</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#算法复杂度-1"><span class="toc-number">2.1.</span> <span class="toc-text">算法复杂度</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#快速排序"><span class="toc-number">3.</span> <span class="toc-text">快速排序</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#算法复杂度-2"><span class="toc-number">3.1.</span> <span class="toc-text">算法复杂度</span></a></li></ol></li></ol>
+ 
+  </div>
 
 <div id="asidepart">
 <div class="closeaside"><a class="closebutton" href="#" title="隐藏侧边栏"></a></div>
@@ -905,12 +386,69 @@ $(document).ready(function(){
       m.removeClass('moveMain');
       a.css('display', 'block').removeClass('fadeOut');
       o.css('display', 'none');
+      
+      $('#toc.toc-aside').css('display', 'none');
         
     }
   });
 });
 </script>
 
+<script type="text/javascript">
+$(document).ready(function(){ 
+  var ai = $('.article-content>iframe'),
+      ae = $('.article-content>embed'),
+      t  = $('#toc'),
+      ta = $('#toc.toc-aside'),
+      o  = $('.openaside'),
+      c  = $('.closeaside');
+  if(ai.length>0){
+    ai.wrap('<div class="video-container" />');
+  };
+  if(ae.length>0){
+   ae.wrap('<div class="video-container" />');
+  };
+  c.click(function(){
+    ta.css('display', 'block').addClass('fadeIn');
+  });
+  o.click(function(){
+    ta.css('display', 'none');
+  });
+  $(window).scroll(function(){
+    ta.css("top",Math.max(140,320-$(this).scrollTop()));
+  });
+});
+</script>
+
+
+<script type="text/javascript">
+$(document).ready(function(){ 
+  var $this = $('.share'),
+      url = $this.attr('data-url'),
+      encodedUrl = encodeURIComponent(url),
+      title = $this.attr('data-title'),
+      tsina = $this.attr('data-tsina'),
+      description = $this.attr('description');
+  var html = [
+  '<a href="#" class="overlay" id="qrcode"></a>',
+  '<div class="qrcode clearfix"><span>扫描二维码分享到微信朋友圈</span><a class="qrclose" href="#nothing"></a><strong>Loading...Please wait</strong><img id="qrcode-pic" data-src="http://s.jiathis.com/qrcode.php?url=' + encodedUrl + '"/></div>',
+  '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="article-share-facebook" target="_blank" title="Facebook"></a>',
+  '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="article-share-twitter" target="_blank" title="Twitter"></a>',
+  '<a href="#qrcode" class="article-share-qrcode" title="微信"></a>',
+  '<a href="http://widget.renren.com/dialog/share?resourceUrl=' + encodedUrl + '&srcUrl=' + encodedUrl + '&title=' + title +'" class="article-share-renren" target="_blank" title="人人"></a>',
+  '<a href="http://service.weibo.com/share/share.php?title='+title+'&url='+encodedUrl +'&ralateUid='+ tsina +'&searchPic=true&style=number' +'" class="article-share-weibo" target="_blank" title="微博"></a>',
+  '<span title="Share to"></span>'
+  ].join('');
+  $this.append(html);
+  $('.article-share-qrcode').click(function(){
+    var imgSrc = $('#qrcode-pic').attr('data-src');
+    $('#qrcode-pic').attr('src', imgSrc);
+    $('#qrcode-pic').load(function(){
+        $('.qrcode strong').text(' ');
+    });
+  });
+});     
+</script>
 
 
 
@@ -971,4 +509,4 @@ $(document).ready(function(){
 <!-- Tiny_search End -->
 
   </body>
- </html>
+</html>
