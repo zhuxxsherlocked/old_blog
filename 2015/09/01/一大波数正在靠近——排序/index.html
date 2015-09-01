@@ -13,20 +13,14 @@
     
     <meta name="description" content="最快最简单的排序——桶排序1956年 E.J.Issac和R.C.Singleton。事先要知道要排序的所有值，摆出所有的容器，出现一次，对于容器数值加一，然后按顺序排布。容器用数组表示。
 现在的不是真正的桶排序。也不算是个排序，若是将学生分数进行排序，只能排学生的分数，不能和名字对应起来。
-浪费空间严重！
-&amp;lt;!--read--&amp;gt;
-
-12345678910111213141516171819202">
+浪费空间严重！">
 <meta property="og:type" content="article">
 <meta property="og:title" content="一大波数正在靠近——排序">
 <meta property="og:url" content="http://zhuxxsherlocked.githuub.io/2015/09/01/一大波数正在靠近——排序/index.html">
 <meta property="og:site_name" content="Hey Sherlock">
 <meta property="og:description" content="最快最简单的排序——桶排序1956年 E.J.Issac和R.C.Singleton。事先要知道要排序的所有值，摆出所有的容器，出现一次，对于容器数值加一，然后按顺序排布。容器用数组表示。
 现在的不是真正的桶排序。也不算是个排序，若是将学生分数进行排序，只能排学生的分数，不能和名字对应起来。
-浪费空间严重！
-&amp;lt;!--read--&amp;gt;
-
-12345678910111213141516171819202">
+浪费空间严重！">
 <meta property="og:image" content="http://7xjcml.com1.z0.glb.clouddn.com/%E6%A1%B6%E6%8E%92%E5%BA%8F.png">
 <meta property="og:image" content="http://7xjcml.com1.z0.glb.clouddn.com/%E5%86%92%E6%B3%A1%E6%8E%92%E5%BA%8F.png">
 <meta property="og:image" content="http://7xjcml.com1.z0.glb.clouddn.com/%E5%BF%AB%E9%80%9F%E6%8E%92%E5%BA%8F.png">
@@ -34,10 +28,7 @@
 <meta name="twitter:title" content="一大波数正在靠近——排序">
 <meta name="twitter:description" content="最快最简单的排序——桶排序1956年 E.J.Issac和R.C.Singleton。事先要知道要排序的所有值，摆出所有的容器，出现一次，对于容器数值加一，然后按顺序排布。容器用数组表示。
 现在的不是真正的桶排序。也不算是个排序，若是将学生分数进行排序，只能排学生的分数，不能和名字对应起来。
-浪费空间严重！
-&amp;lt;!--read--&amp;gt;
-
-12345678910111213141516171819202">
+浪费空间严重！">
 
     
     <link rel="alternative" href="/atom.xml" title="Hey Sherlock" type="application/atom+xml">
@@ -120,7 +111,7 @@
 		<h2 id="最快最简单的排序——桶排序">最快最简单的排序——桶排序</h2><p>1956年 E.J.Issac和R.C.Singleton。<br>事先要知道要排序的所有值，摆出所有的容器，出现一次，对于容器数值加一，然后按顺序排布。<br>容器用数组表示。</p>
 <p>现在的不是真正的桶排序。也不算是个排序，若是将学生分数进行排序，只能排学生的分数，不能和名字对应起来。</p>
 <p>浪费空间严重！</p>
-<!--read-->
+<a id="more"></a>
 <p><img src="http://7xjcml.com1.z0.glb.clouddn.com/%E6%A1%B6%E6%8E%92%E5%BA%8F.png" alt="桶排序"></p>
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//输入n个1~1000之间的整数，从大到小进行排序。桶排序</span></span><br><span class="line"></span><br><span class="line"><span class="preprocessor">#<span class="keyword">include</span> &lt;stdio.h&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span><br><span class="line"></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> book[<span class="number">1001</span>], i, j, t, n;</span><br><span class="line">	<span class="keyword">for</span> (i = <span class="number">0</span>; i &lt;= <span class="number">1000</span>; i++)</span><br><span class="line">		book[i] = <span class="number">0</span>;</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"请输入排序的个数："</span>);</span><br><span class="line">	<span class="built_in">scanf</span>(<span class="string">"%d"</span>, &amp;n); <span class="comment">//输入一个数n，表示接下来有n个数</span></span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"请输入各数值："</span>);</span><br><span class="line">	<span class="keyword">for</span> (i = <span class="number">1</span>; i &lt;= n; i++)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="built_in">scanf</span>(<span class="string">"%d"</span>,&amp;t); <span class="comment">//把每一个数读到变量t中</span></span><br><span class="line">		book[t]++;  <span class="comment">//进行计数，对编号为t的桶放一个旗子</span></span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">for</span> (i = <span class="number">1000</span>; i &gt;= <span class="number">0</span>; i--)  <span class="comment">//依次判断编号1000~0的桶</span></span><br><span class="line">		<span class="keyword">for</span> (j = <span class="number">1</span>; j &lt;= book[i]; j++)  <span class="comment">//出现几次就打印几次桶的编号</span></span><br><span class="line">			<span class="built_in">printf</span>(<span class="string">"%d "</span>, i);</span><br><span class="line"></span><br><span class="line">	getchar(); getchar();</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>运行结果：<br><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">10</span><br><span class="line">8 100 50 22 15 6 1 1000 999 0</span><br><span class="line"></span><br><span class="line">1000 999 100 50 22 15 8 6 1 0</span><br></pre></td></tr></table></figure></p>
@@ -160,7 +151,7 @@
 
   <div class="article-tags">
   
-  <span></span> <a href="/tags/算法-啊哈算法/">算法 啊哈算法</a>
+  <span></span> <a href="/tags/啊哈算法/">啊哈算法</a><a href="/tags/算法/">算法</a>
   </div>
 
 </div>
@@ -252,7 +243,11 @@
 			
 		
 			
-				<li><a href="/tags/算法-啊哈算法/" title="算法 啊哈算法">算法 啊哈算法<sup>1</sup></a></li>
+				<li><a href="/tags/算法/" title="算法">算法<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/啊哈算法/" title="啊哈算法">啊哈算法<sup>1</sup></a></li>
 			
 		
 			
@@ -260,7 +255,7 @@
 			
 		
 			
-				<li><a href="/tags/爬虫/" title="爬虫">爬虫<sup>1</sup></a></li>
+				<li><a href="/tags/omnet/" title="omnet++">omnet++<sup>1</sup></a></li>
 			
 		
 			
@@ -280,7 +275,7 @@
 			
 		
 			
-				<li><a href="/tags/omnet/" title="omnet++">omnet++<sup>1</sup></a></li>
+				<li><a href="/tags/爬虫/" title="爬虫">爬虫<sup>1</sup></a></li>
 			
 		
 		</ul>
