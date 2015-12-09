@@ -4,34 +4,36 @@
 <head>
   <meta charset="UTF-8">
   
-    <title>警示 | Hey Sherlock</title>
+    <title>【车联网仿真】(2) 仿真平台介绍 | Hey Sherlock</title>
     <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
     
     <meta name="author" content="Zhuxx">
     
 
     
-    <meta name="description" content="这几天心情又很忙乱。要学的太多，不会的太多，而我现在越来越意识到自己并不专一，好多事都想铺开，却每个都没什么进展。
-这半年，真的不要去想什么实习了。不然，什么都做不好。
-我觉得技能学习什么的并行展开吧，单一开展我觉得不适合此时的状态。
-1 python 2小时2 数据库 2小时3 算法   2小时4 实验室及其他
-生活什么的，规律规律规律，重要的事情说三遍！12点前睡，8点前醒，吃早饭，睡前阅读。">
+    <meta name="description" content="仿真平台车联网仿真平台必须同时能够仿真无线通信和微观交通。这两项仿真功能已经分别被目前成熟的无线通信仿真器和微观交通仿真器实现。无线通信仿真主要用于评价通信协议在各种不同的情况下的性能，而微观交通仿真器用于测试不同交通条件下不同驾驶员行为下的交通性能。
+主要分为：分离式 嵌入式 联合式 三种方式。
+下面是我几篇仿真软件我比较熟悉的平台。
+
+Arbabi将一个车辆运动模块嵌入到网络仿真器Networ">
 <meta property="og:type" content="article">
-<meta property="og:title" content="警示">
-<meta property="og:url" content="http://zhuxxsherlocked.githuub.io/2015/08/30/警示/index.html">
+<meta property="og:title" content="【车联网仿真】(2) 仿真平台介绍">
+<meta property="og:url" content="http://zhuxxsherlocked.githuub.io/2015/12/09/【车联网仿真】-2-仿真平台介绍/index.html">
 <meta property="og:site_name" content="Hey Sherlock">
-<meta property="og:description" content="这几天心情又很忙乱。要学的太多，不会的太多，而我现在越来越意识到自己并不专一，好多事都想铺开，却每个都没什么进展。
-这半年，真的不要去想什么实习了。不然，什么都做不好。
-我觉得技能学习什么的并行展开吧，单一开展我觉得不适合此时的状态。
-1 python 2小时2 数据库 2小时3 算法   2小时4 实验室及其他
-生活什么的，规律规律规律，重要的事情说三遍！12点前睡，8点前醒，吃早饭，睡前阅读。">
+<meta property="og:description" content="仿真平台车联网仿真平台必须同时能够仿真无线通信和微观交通。这两项仿真功能已经分别被目前成熟的无线通信仿真器和微观交通仿真器实现。无线通信仿真主要用于评价通信协议在各种不同的情况下的性能，而微观交通仿真器用于测试不同交通条件下不同驾驶员行为下的交通性能。
+主要分为：分离式 嵌入式 联合式 三种方式。
+下面是我几篇仿真软件我比较熟悉的平台。
+
+Arbabi将一个车辆运动模块嵌入到网络仿真器Networ">
+<meta property="og:image" content="http://7xjcml.com1.z0.glb.clouddn.com/%E8%BD%A6%E8%81%94%E7%BD%91%E4%BB%BF%E7%9C%9F%E5%B9%B3%E5%8F%B0%E5%AF%B9%E6%AF%94.png">
+<meta property="og:image" content="http://7xjcml.com1.z0.glb.clouddn.com/%E7%89%A9%E7%90%86%E5%B1%82%E9%85%8D%E7%BD%AE%E8%A1%A8.png">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="警示">
-<meta name="twitter:description" content="这几天心情又很忙乱。要学的太多，不会的太多，而我现在越来越意识到自己并不专一，好多事都想铺开，却每个都没什么进展。
-这半年，真的不要去想什么实习了。不然，什么都做不好。
-我觉得技能学习什么的并行展开吧，单一开展我觉得不适合此时的状态。
-1 python 2小时2 数据库 2小时3 算法   2小时4 实验室及其他
-生活什么的，规律规律规律，重要的事情说三遍！12点前睡，8点前醒，吃早饭，睡前阅读。">
+<meta name="twitter:title" content="【车联网仿真】(2) 仿真平台介绍">
+<meta name="twitter:description" content="仿真平台车联网仿真平台必须同时能够仿真无线通信和微观交通。这两项仿真功能已经分别被目前成熟的无线通信仿真器和微观交通仿真器实现。无线通信仿真主要用于评价通信协议在各种不同的情况下的性能，而微观交通仿真器用于测试不同交通条件下不同驾驶员行为下的交通性能。
+主要分为：分离式 嵌入式 联合式 三种方式。
+下面是我几篇仿真软件我比较熟悉的平台。
+
+Arbabi将一个车辆运动模块嵌入到网络仿真器Networ">
 
     
     <link rel="alternative" href="/atom.xml" title="Hey Sherlock" type="application/atom+xml">
@@ -91,14 +93,14 @@
 		<header class="article-info clearfix">
   <h1 itemprop="name">
     
-      <a href="/2015/08/30/警示/" title="警示" itemprop="url">警示</a>
+      <a href="/2015/12/09/【车联网仿真】-2-仿真平台介绍/" title="【车联网仿真】(2) 仿真平台介绍" itemprop="url">【车联网仿真】(2) 仿真平台介绍</a>
   </h1>
   <p class="article-author">By
        
 		<a href="http://zhuxxsherlocked.githuub.io/about" title="Zhuxx" target="_blank" itemprop="author">Zhuxx</a>
 		
   <p class="article-time">
-    <time datetime="2015-08-30T07:23:06.000Z" itemprop="datePublished"> 发表于 2015-08-30</time>
+    <time datetime="2015-12-09T13:30:20.000Z" itemprop="datePublished"> 发表于 2015-12-09</time>
     
   </p>
 </header>
@@ -107,15 +109,40 @@
 		<div id="toc" class="toc-article">
 			<strong class="toc-title">文章目录</strong>
 		
-			
+			<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#仿真平台"><span class="toc-number">1.</span> <span class="toc-text">仿真平台</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#OMNeT++"><span class="toc-number">2.</span> <span class="toc-text">OMNeT++</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#物理层配置"><span class="toc-number">2.1.</span> <span class="toc-text">物理层配置</span></a></li></ol></li></ol>
 		
 		</div>
 		
-		<p>这几天心情又很忙乱。<br>要学的太多，不会的太多，而我现在越来越意识到自己并不专一，好多事都想铺开，却每个都没什么进展。</p>
-<p>这半年，真的不要去想什么实习了。<br>不然，什么都做不好。</p>
-<p>我觉得技能学习什么的并行展开吧，单一开展我觉得不适合此时的状态。</p>
-<p>1 python 2小时<br>2 数据库 2小时<br>3 算法   2小时<br>4 实验室及其他</p>
-<p>生活什么的，规律规律规律，重要的事情说三遍！<br>12点前睡，8点前醒，吃早饭，睡前阅读。</p>
+		<h2 id="仿真平台">仿真平台</h2><p>车联网仿真平台必须同时能够仿真无线通信和微观交通。这两项仿真功能已经分别被目前成熟的无线通信仿真器和微观交通仿真器实现。无线通信仿真主要用于评价通信协议在各种不同的情况下的性能，而微观交通仿真器用于测试不同交通条件下不同驾驶员行为下的交通性能。</p>
+<p>主要分为：分离式 嵌入式 <strong>联合式</strong> 三种方式。</p>
+<p>下面是我几篇仿真软件我比较熟悉的平台。</p>
+<ul>
+<li>Arbabi将一个车辆运动模块嵌入到网络仿真器Network simulator 3（NS3）中，使得NS3 可以进行车联网的仿真。</li>
+</ul>
+<blockquote>
+<p>Arbabi H, Weigle M C. Highway mobility and vehicular ad-hoc networks in<br>ns-3. In Proceedings of the Winter Simulation Conference. Winter Simulation<br>Conference, 2010: 2991-3003.</p>
+</blockquote>
+<a id="more"></a>
+<ul>
+<li>Veins 项目采用的两个仿真器分别是开源交通仿真器SUMO和开源交通仿真器OMNeT++。</li>
+</ul>
+<blockquote>
+<p>Sommer C, Yao Z, German R, et al. On the need for bidirectional coupling of<br>road traffic microsimulation and network simulation. In Proceedings of the 1st<br>ACM SIGMOBILE workshop on Mobility models. ACM, 2008: 41-48.</p>
+</blockquote>
+<ul>
+<li>iTETRIS联合仿真平台，将sumo和ns3结合起来。</li>
+</ul>
+<blockquote>
+<p>Rondinone M, Maneros J, Krajzewicz D, et al. iTETRIS: a modular simulation<br>platform for the large scale evaluation of cooperative ITS applications.<br>Simulation Modelling Practice and Theory, 2013, 34: 99-125.</p>
+</blockquote>
+<p><img src="http://7xjcml.com1.z0.glb.clouddn.com/%E8%BD%A6%E8%81%94%E7%BD%91%E4%BB%BF%E7%9C%9F%E5%B9%B3%E5%8F%B0%E5%AF%B9%E6%AF%94.png" alt="车联网仿真平台" title="车联网仿真平台对比"></p>
+<p>图引自《基于VISSIM与OMNeT++的车联网仿真平台及其应用研究》。</p>
+<hr>
+<h2 id="OMNeT++">OMNeT++</h2><p>OMNeT++是一个广泛使用的开源的网络仿真器，拥有众多活跃的社区。OMNeT++同时支持大规模的仿真，支持所有典型的适用于车联网应用的通信协议。</p>
+<h3 id="物理层配置">物理层配置</h3><p>主要包括发射功率，接受敏感度，白噪声以及数据率等。</p>
+<p><em>之前从未想过还需要进行物理层的配置，通过这篇文章先做一个简单了解，如果需要应该是使用DSRC协议。</em></p>
+<p><img src="http://7xjcml.com1.z0.glb.clouddn.com/%E7%89%A9%E7%90%86%E5%B1%82%E9%85%8D%E7%BD%AE%E8%A1%A8.png" alt="物理层配置表" title="物理层配置表"></p>
+<p>DSRC共有8个通道，7个服务通道（Service Channel, SCH）和1个控制通道（Control Channel, CCH）。<br>服务通道主要处理一些服务信息和优先级较低的安全信息。控制通道主要处理控制信息和优先级较高的安全信息。一般的，控制通道供安全性较高的交通应用使用，如十字路口防碰撞等；服务通道则做一些多媒体等非高安全性的应用。<br>为了简化仿真过程，选取一个控制通道和一个服务通道进行仿真。 （不知我需不需要）</p>
   
 	</div>
 		<footer class="article-footer clearfix">
@@ -123,9 +150,14 @@
 
 <div class="article-categories">
   <span></span>
-  <a class="article-category-link" href="/categories/杂念/">杂念</a>
+  <a class="article-category-link" href="/categories/学习/">学习</a>
 </div>
 
+
+  <div class="article-tags">
+  
+  <span></span> <a href="/tags/omnet/">omnet++</a><a href="/tags/sumo/">sumo</a><a href="/tags/veins/">veins</a>
+  </div>
 
 </div>
 
@@ -133,7 +165,7 @@
 
 	<div class="article-share" id="share">
 	
-	  <div data-url="http://zhuxxsherlocked.githuub.io/2015/08/30/警示/" data-title="警示 | Hey Sherlock" data-tsina="1576552057" class="share clearfix">
+	  <div data-url="http://zhuxxsherlocked.githuub.io/2015/12/09/【车联网仿真】-2-仿真平台介绍/" data-title="【车联网仿真】(2) 仿真平台介绍 | Hey Sherlock" data-tsina="1576552057" class="share clearfix">
 	  </div>
 	
 	</div>
@@ -146,19 +178,11 @@
 	
 <nav class="article-nav clearfix">
  
- <div class="prev" >
- <a href="/2015/09/01/一大波数正在靠近——排序/" title="一大波数正在靠近——排序">
-  <strong>上一篇：</strong><br/>
-  <span>
-  一大波数正在靠近——排序</span>
-</a>
-</div>
-
 
 <div class="next">
-<a href="/2015/08/24/python爬虫（一）/"  title="python爬虫（一）">
+<a href="/2015/12/03/光大证券实习总结/"  title="光大证券实习总结">
  <strong>下一篇：</strong><br/> 
- <span>python爬虫（一）
+ <span>光大证券实习总结
 </span>
 </a>
 </div>
@@ -173,7 +197,7 @@
   <div id="toc" class="toc-aside">
   <strong class="toc-title">文章目录</strong>
  
- 
+ <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#仿真平台"><span class="toc-number">1.</span> <span class="toc-text">仿真平台</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#OMNeT++"><span class="toc-number">2.</span> <span class="toc-text">OMNeT++</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#物理层配置"><span class="toc-number">2.1.</span> <span class="toc-text">物理层配置</span></a></li></ol></li></ol>
  
   </div>
 
