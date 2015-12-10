@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   
-    <title>【车辆网仿真】 (1) SUMO学习 | Hey Sherlock</title>
+    <title>【车辆网仿真】(1) SUMO学习 | Hey Sherlock</title>
     <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
     
     <meta name="author" content="Zhuxx">
@@ -15,7 +15,7 @@
 
 目的是进行交通仿真。之前考虑过使用VISSIM，也买了书进行学习，但是VISSIM是商业软件，是要收费的，想画交大地图时，学生版限制在1000m，仿真时间也只有3600s，放弃。CXY推荐了Veins，开源，免费。但有句话说：免费的是最贵的。 所以，还要下一番功夫。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="【车辆网仿真】 (1) SUMO学习">
+<meta property="og:title" content="【车辆网仿真】(1) SUMO学习">
 <meta property="og:url" content="http://zhuxxsherlocked.githuub.io/2015/05/29/【车辆网仿真】 (1) SUMO学习/index.html">
 <meta property="og:site_name" content="Hey Sherlock">
 <meta property="og:description" content="十天前接触了下SUMO，碰到一堆BUG，一定要选对版本。感谢CXY。现在才总结表示有点呵呵。
@@ -23,7 +23,7 @@
 目的是进行交通仿真。之前考虑过使用VISSIM，也买了书进行学习，但是VISSIM是商业软件，是要收费的，想画交大地图时，学生版限制在1000m，仿真时间也只有3600s，放弃。CXY推荐了Veins，开源，免费。但有句话说：免费的是最贵的。 所以，还要下一番功夫。">
 <meta property="og:image" content="http://7xjcml.com1.z0.glb.clouddn.com/sumo-map.png">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="【车辆网仿真】 (1) SUMO学习">
+<meta name="twitter:title" content="【车辆网仿真】(1) SUMO学习">
 <meta name="twitter:description" content="十天前接触了下SUMO，碰到一堆BUG，一定要选对版本。感谢CXY。现在才总结表示有点呵呵。
 
 目的是进行交通仿真。之前考虑过使用VISSIM，也买了书进行学习，但是VISSIM是商业软件，是要收费的，想画交大地图时，学生版限制在1000m，仿真时间也只有3600s，放弃。CXY推荐了Veins，开源，免费。但有句话说：免费的是最贵的。 所以，还要下一番功夫。">
@@ -86,7 +86,7 @@
 		<header class="article-info clearfix">
   <h1 itemprop="name">
     
-      <a href="/2015/05/29/【车辆网仿真】 (1) SUMO学习/" title="【车辆网仿真】 (1) SUMO学习" itemprop="url">【车辆网仿真】 (1) SUMO学习</a>
+      <a href="/2015/05/29/【车辆网仿真】 (1) SUMO学习/" title="【车辆网仿真】(1) SUMO学习" itemprop="url">【车辆网仿真】(1) SUMO学习</a>
   </h1>
   <p class="article-author">By
        
@@ -112,14 +112,16 @@
 <hr>
 <a id="more"></a>
 <p>1.Veins主页  <a href="http://veins.car2x.org/" target="_blank" rel="external">Veins Home</a><br>  查看Tutorial，需要安装SUMO， OMNeT++， Veins.<br>  注：<strong>一定要注意版本</strong><br>      之前装的SUMO msi是0.23.0 教程要求的是0.21.0 执行命令时一直有bug<br>      换回0.21.0 原本没出错的地方，倒出错了。<br>      还有lib库的版本。用0.21.0版本的lib 执行<code>randomTrips.py</code> ，换用0.23.0却能正常运行。但是CXY运行却是好的。<br>      很崩溃！!！有木有！！！<br>      好在，最后跑出了地图。</p>
-<p>2.地图导入<br>  参考 <a href="https://www.youtube.com/results?search_query=sumo+import+map" target="_blank" rel="external">https://www.youtube.com/results?search_query=sumo+import+map</a> 第一个和第三个视频<br>  sumo-0.21.0 下 start-command-line.bat<br>  执行以下指令:</p>
+<p>2.地图导入<br>  参考 <a href="https://www.youtube.com/results?search_query=sumo+import+map" target="_blank" rel="external">https://www.youtube.com/results?search_query=sumo+import+map</a> 第一个和第三个视频<br>  sumo-0.21.0/bin 下 start-command-line.bat<br>  执行以下指令:</p>
 <pre><code>cd /d c:\Users\Zhuxx\veins\sumo-<span class="number">0.21</span>.<span class="number">0</span>\sjtu
 netconvert --osm-files sjtu<span class="class">.osm</span> -o sjtu<span class="class">.net</span><span class="class">.xml</span>
 polyconvert --net-file sjtu<span class="class">.net</span><span class="class">.xml</span> --osm-files sjtu<span class="class">.osm</span> --type-file typemap<span class="class">.xml</span> -o sjtu<span class="class">.poly</span><span class="class">.xml</span>
 python c:\Users\Zhuxx\veins\sumo-<span class="number">0.21</span>.<span class="number">0</span>\tools\trip\randomTrips<span class="class">.py</span> -n sjtu<span class="class">.net</span><span class="class">.xml</span> -e <span class="number">50</span> -l
 python c:\Users\Zhuxx\veins\sumo-<span class="number">0.21</span>.<span class="number">0</span>\tools\trip\randomTrips<span class="class">.py</span> -n sjtu<span class="class">.net</span><span class="class">.xml</span> -r sjtu<span class="class">.rou</span><span class="class">.xml</span> -e <span class="number">50</span> -l
 sumo-gui sjtu<span class="class">.sumo</span><span class="class">.cfg</span>
-</code></pre><p>其中牵扯config文件修改，typemap.xml等。<br>导入地图效果:<br><img src="http://7xjcml.com1.z0.glb.clouddn.com/sumo-map.png" alt="SJTU地图"></p>
+</code></pre><p>其中牵扯config文件修改，typemap.xml等。<br>具体说一下。<br>typemap.xml导入到文件夹中即可。<br>config进去修改一下配置信息的文件名即可。</p>
+<p>2015-12-10总结：<br>其实造成麻烦的原因应该就是python的版本问题。这次c盘没有装python，倒没有问题出现了。<br>openstreetmap导入上海地图经常会有错误，因为其中包含的“沪”字应该识别不出来，替换成一个任意的字母就好了。<br>cfg文件应该还好配置一下，现在发现高架桥上并没有车出现，如若配置无果，再看看单纯高架路是否可行。</p>
+<p>导入地图效果:<br><img src="http://7xjcml.com1.z0.glb.clouddn.com/sumo-map.png" alt="SJTU地图"></p>
   
 	</div>
 		<footer class="article-footer clearfix">
@@ -142,7 +144,7 @@ sumo-gui sjtu<span class="class">.sumo</span><span class="class">.cfg</span>
 
 	<div class="article-share" id="share">
 	
-	  <div data-url="http://zhuxxsherlocked.githuub.io/2015/05/29/【车辆网仿真】 (1) SUMO学习/" data-title="【车辆网仿真】 (1) SUMO学习 | Hey Sherlock" data-tsina="1576552057" class="share clearfix">
+	  <div data-url="http://zhuxxsherlocked.githuub.io/2015/05/29/【车辆网仿真】 (1) SUMO学习/" data-title="【车辆网仿真】(1) SUMO学习 | Hey Sherlock" data-tsina="1576552057" class="share clearfix">
 	  </div>
 	
 	</div>
